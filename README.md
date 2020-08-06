@@ -14,11 +14,10 @@
 ## profiles table
 |Column|Type|Options|
 |------|----|-------|
-|first-name|string|null false|
-|last-name|string|null false|
+|first_name|string|null false|
+|last_name|string|null false|
 |birthday|date|null false|
 |user_id|integer|null false, foreign_key true|
-|address_id|integer|null false, foreign_key true|
 
 ### Association
 - belongs_to :user
@@ -39,10 +38,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|first-name|string|null false|
-|last-name|string|null false|
-|first-hurigana|string|null false|
-|last-hurigana|string|null false|
+|first_name|string|null false|
+|last_name|string|null false|
+|first_hurigana|string|null false|
+|last_hurigana|string|null false|
 |post|integer|null false|
 |prefectures|string|null false|
 |city|string|null false|
@@ -66,10 +65,33 @@
 |user_id|integer|null false,foreign_key true|
 |category_id|integer|foreign_key true|
 |brand_id|integer|foreign_key true|
-|image_id|integer|foreign_key true|
 
 ### Association
 - belongs_to :user
 - belongs_to :category
 - belongs_to :brand
-- belongs_to :image
+- has_many :images
+
+## categories table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null false|
+
+### Association
+- has_many :items
+
+## brands table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null false|
+
+### Association
+- has_many :items
+
+## images table
+|Column|Type|Options|
+|------|----|-------|
+|name|text|null false|
+
+### Association
+- has_many :items
