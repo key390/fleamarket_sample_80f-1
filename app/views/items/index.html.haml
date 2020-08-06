@@ -1,0 +1,12 @@
+%body
+  %header.taitolhead
+    .taitolhead__headna
+      .taitolhead__headna__headmai
+        %h1.taitolhead__headna__headmai__icon1
+          = link_to '#' do
+            = image_tag ("logo.png") 
+        .taitolhead__headna__headmai__kenbox
+          %input{type: "text", class: "taitolhead__headna__headmai__input-box", "placeholder": "キーワードから探す"}
+          .taitolhead__headna__headmai__input-isu
+            = link_to '#' do
+              = image_tag ("icon-search 1.png")
