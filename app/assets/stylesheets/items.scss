@@ -63,11 +63,38 @@ body {
         border: 0;
         cursor: pointer;
         background-color: #3CCACE;
-        padding: 8px;
+        padding: 6px;
         img {
           width: 100%;
           vertical-align: bottom;
         }
+      }
+    }
+  }
+  &__navi{
+    font-size: 14px;
+    display: flex;
+    margin-bottom: 10px;
+
+    &__list{
+      position: relative;
+      display: flex;
+      color: #333;
+      text-decoration: none;
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: 18px;
+      padding-right: 30px;
+
+      &__li1{
+        text-decoration: none;
+        padding: 0;
+        padding-right: 30px;
+      }
+
+      &__li2{
+        display: flex;
+        padding: 0 0 0 16px;
       }
     }
   }
