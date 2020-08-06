@@ -103,8 +103,12 @@ GEM
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     erubi (1.9.0)
+
+    erubis (2.7.0)
+
     erubis (2.7.0)
     excon (0.76.0)
+
     ffi (1.13.1)
     fog-aws (3.6.6)
       fog-core (~> 2.1)
@@ -303,6 +307,9 @@ DEPENDENCIES
   capistrano-rbenv
   capistrano3-unicorn
   capybara (>= 2.15)
+
+  haml-rails (>= 1.0, <= 2.0.1)
+
   carrierwave
   fog-aws
   haml-rails (>= 1.0, <= 2.0.1)
