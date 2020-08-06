@@ -58,7 +58,7 @@
 |------|----|-------|
 |name|string|null false|
 |explain|text|null false|
-|delivery-cost|integer|null false|
+|delivery_cost|integer|null false|
 |area|string|null false|
 |limit|string|null false|
 |price|integer|null false|
@@ -94,4 +94,4 @@
 |name|text|null false|
 
 ### Association
-- has_many :items
+- belongs_to :items
