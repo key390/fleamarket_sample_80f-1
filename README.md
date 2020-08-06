@@ -11,7 +11,6 @@
 - has_one :card
 - has_many :items
 
-
 ## profiles table
 |Column|Type|Options|
 |------|----|-------|
@@ -24,7 +23,6 @@
 ### Association
 - belongs_to :user
 
-
 ## cards table
 |Column|Type|Options|
 |------|----|-------|
@@ -36,7 +34,6 @@
 
 ### Association
 - belongs_to :user
-
 
 ## addresses table
 
@@ -56,7 +53,6 @@
 
 ### Association
 - belongs_to :user
-
 
 ## items table
 |Column|Type|Options|
