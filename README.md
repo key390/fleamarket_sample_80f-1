@@ -63,7 +63,7 @@
 |limit|string|null false|
 |price|integer|null false|
 |user_id|integer|null false,foreign_key true|
-|category_id|integer|foreign_key true|
+|category_id|integer|null false, foreign_key true|
 |brand_id|integer|foreign_key true|
 
 ### Association
@@ -92,7 +92,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null false|
-|item_id|integer|foreign_key true|
+|item_id|integer|null false, foreign_key true
 
 
 ### Association
