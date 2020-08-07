@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   def index
+    @items = Item.includes(:images)
   end
 
   def new
@@ -16,3 +17,4 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name,:explain,:status,:delivery_cost,:area,:limit,:price,:category_id,:brand_id,images_attributes: [:image, :_destroy, :id])
   end
 end
+
