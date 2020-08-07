@@ -7,31 +7,23 @@ html {
 * {
   box-sizing: border-box;
 }
-
 body {
   width: 100%;
   height: 100%;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
 }
-
 .taitolhead {
   padding: 0 60px;
-  
-
-
   &__headna {
     max-width: 1040px;
     width: 100%;
     min-height: 82px;
     margin: 0 auto;
     padding: 15px 0 0;
-
-
     &__headmai{
       position: relative;
       display: flex;
       align-items: center;
-
-
       &__icon1 {
         padding-bottom: 10px;
         margin-right: 30px;
@@ -45,19 +37,16 @@ body {
           vertical-align: bottom;
         }
       }
-
       &__kenbox{
         margin-left: auto;
         width: 100%;
         display: flex;
       }
-
       &__input-box{
         width: calc(100% - 26px);
         height: 36px;
         padding: 0 0 0 5px;
       }
-
       &__input-isu{
         width: 36px;
         border: 0;
@@ -78,27 +67,70 @@ body {
 
     &__list{
       position: relative;
+    &__navi{
+      font-size: 14px;
       display: flex;
-      color: #333;
-      text-decoration: none;
-      background-position: center right;
-      background-repeat: no-repeat;
-      background-size: 18px;
-      padding-right: 30px;
-
-      &__li1{
-        text-decoration: none;
-        padding: 0;
-        padding-right: 30px;
-      }
-
-      &__li2{
+      margin-bottom: 10px;
+      &__list{
+        position: relative;
         display: flex;
-        padding: 0 0 0 16px;
+        color: #333;
+        text-decoration: none;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: 18px;
+        padding-right: 30px;
+        &__li1{
+          text-decoration: none;
+          padding: 0;
+          padding-right: 30px;
+          line-height: 38px;
+        }
+        &__li2{
+          display: flex;
+          padding: 0 0 0 16px;
+          line-height: 38px;
+        }
+      }
+      &__list2{
+        margin-left: auto;
+        display: flex;
+        &__lis3{
+          color: #333;
+          line-height: 38px;
+           padding: 0 0 0 16px;
+        }
+        &__lis4{
+          color: #333;
+          line-height: 38px;
+           padding: 0 0 0 16px;
+        }
       }
     }
   }
 }
+.manini{
+  background: #f8f8f8;
+  &__hi{
+    width: 100%;
+    height: 560px;
+    background-image: url(bg-mainVisual-pict_pc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    &__taitosub{
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      font-size: 60px;
+      line-height: 1.2;
+      color: #fff;
+    }
+  }
+}
+
 
 
 
