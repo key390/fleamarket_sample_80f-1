@@ -1,0 +1,140 @@
+.main{
+  // height: 100vh;
+  width: 100vw;
+  padding: 50px 100px;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  width: 1000px;
+  padding: 50px 200px;
+  background-color: white;
+  .content-box{
+  }
+}
+
+.image{
+  text-align: center;
+  .image__name{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .image__top{
+    .image__top__1{
+      text-align: center;
+      object-fit: cover;
+      height: 346px;
+    }
+
+  }
+  
+}
+.image__bottom{
+  display: flex;
+  justify-content: center;
+}
+
+.price{
+  text-align: center;
+  .price__integer{
+    font-size: 46px;
+    font-weight: bold;
+  }
+  .price__index{
+    margin-bottom: 30px;
+  }
+}
+        
+.text{
+  display: flex;
+  // padding: 5px 250px;
+  margin-bottom: 30px;
+  .text-form{
+  // width: 800px;
+  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+  }
+}
+
+.index{
+  width: 100%;
+  // padding: 0 100px;
+  font-size: 18px;
+  table{
+    width: 100%;
+    border: 1px solid black;
+    // margin: 0 auto;
+    tr{
+      th{
+        width: 30%;
+        background-color:#eee;
+        text-align: center;
+        padding: 8px;
+        border: 1px solid #dedede;
+      }
+      td{
+        padding-left: 15px;
+        border: 1px solid #dedede;
+      }
+    }
+  }
+}
+
+.buy{
+  display: flex;
+  justify-content: center;
+  a{
+    text-decoration: none;
+  }
+}
+
+.buy-btn{
+  // display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  background-color: cyan;
+  color:black;
+  border-bottom: solid 4px #627295;
+  border-radius: 20px;
+  font-size: 50px;
+  width: 500px;
+  text-align: center;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+.buy-btn:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+.option{
+  display: flex;
+  justify-content: space-between;
+  // .option-btns{
+  //   margin: 0 auto;
+  // }
+}
+
+.option-like{
+  display: flex;
+  align-items: center;
+  border: 1px solid orange;
+  border-radius: 40px;
+  padding: 5px;
+  .favorite{
+    font-size: 20px;
+    
+  }
+}
+.option-caution{
+  display: flex;
+  align-items: center;
+  .caution{
+    font-size: 20px;
+  }
+}
