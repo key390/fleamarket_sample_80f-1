@@ -1,0 +1,109 @@
+%body
+  %header.taitolhead
+    .taitolhead__headna
+      .taitolhead__headna__headmai
+        %h1.taitolhead__headna__headmai__icon1
+          = link_to '#' do
+            = image_tag ("logo.png") 
+        .taitolhead__headna__headmai__kenbox
+          %input{type: "text", class: "taitolhead__headna__headmai__input-box", "placeholder": "キーワードから探す"}
+          .taitolhead__headna__headmai__input-isu
+            = link_to '#' do
+              = image_tag ("icon-search 1.png")
+    .taitolhead__navi
+      %ul.taitolhead__navi__list
+        %li.taitolhead__navi__list__li1 
+          = link_to '#' do
+            %a#btn1 カテゴリー
+        %li.taitolhead__navi__list__li2
+          = link_to '#' do
+            %a#btn2 ブランド
+.main
+  .content
+    .content-box
+      .image
+        .image__name
+          ここに名前が入る
+        .image__top
+          = image_tag 'pict-reason-03.jpg', class:'image__top__1',size:"500x300"
+        .image__bottom
+          = image_tag 'pict-reason-02.jpg', class:'image__bottom__all',size:"200x200"
+          = image_tag 'pict-reason-02.jpg', class:'image__bottom__all',size:"200x200"
+          = image_tag 'pict-reason-02.jpg', class:'image__bottom__all',size:"200x200"
+      .price
+        .price__integer
+          ￥100,000,000
+        .price__index
+          (税込み) 送料込 プライスレスです
+      .text
+        .text-form
+          がっかりしてめそめそしてどうしたんだい
+          太陽みたいに笑うきみはどこだい
+          やりたいこと やったもん勝ち青春なら
+          つらいときはいつだってそばにいるから
+          夢はでかくなけりゃつまらないだろう
+          胸をたたいて冒険しよう
+          そうさ100％勇気 もうがんばるしかないさ
+          この世界中の元気 抱きしめながら
+          そうさ100％勇気 もうやりきるしかないさ
+          ぼくたちが持てる輝き 永遠に忘れないでね
+
+      .index
+        %table
+          %tr
+            %th 出品者
+            %td 私だ！
+          %tr
+            %th カテゴリー
+            %td 私だ！
+          %tr
+            %th ブランド
+            %td 私だ！
+          %tr
+            %th 商品のサイズ
+            %td 私だ！
+          %tr
+            %th 商品の状態
+            %td 私だ！
+          %tr
+            %th 配送料の負担
+            %td 私だ！
+          %tr
+            %th 発送元の地域
+            %td 私だ！
+          %tr
+            %th 発送日の目安
+            %td 私だ！
+      .buy
+        = link_to '#' do
+          .buy-btn
+            購入する！
+      .option
+        %ul.option-btns
+          %li.option-like
+            = icon('fa','star',class:"option__btn")
+            .favorite
+              お気に入り
+        %ul
+          %li.option-caution
+            = icon('fa','flag',class:"option__btn")
+            .caution
+              不適切な商品を通報
+    .comment
+      = form_with html: {class: "form"}, local: true do |f|
+        .comment-form
+          = f.text_area :content, class: "comment-form__text", placeholder: 'コメント下さい何でもします'
+          .comment-form__attention
+            相手のことを考え丁寧なコメントを心がけましょう。
+            不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          .comment-form__btn
+            = f.submit "コメントする！", class: "comment-form__send"
+            = icon('fa','comment',class:"comment-form__icon")
+    %ul.next-link
+      %li.next-link__1
+        = link_to "#" ,class: "btn" do
+          < 前の商品
+      %li.next-link__2
+        = link_to "#" ,class: "btn" do
+          次の商品 >
+    .related-items
