@@ -10,8 +10,10 @@
 .content{
   width: 1000px;
   padding: 50px 200px;
-  background-color: white;
+  // background-color: white;
   .content-box{
+    background-color: white;
+    padding: 20px 40px;
   }
 }
 
@@ -126,15 +128,72 @@
   border: 1px solid orange;
   border-radius: 40px;
   padding: 5px;
+  .option__btn{
+    color: #3CCACE;
+  }
   .favorite{
     font-size: 20px;
-    
+    color: #3CCACE;
+    margin-left: 5px;
   }
 }
 .option-caution{
   display: flex;
   align-items: center;
+  padding: 5px;
+  border: 1px black solid;
+  border-radius: 10px;
   .caution{
-    font-size: 20px;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+}
+
+.comment{
+  margin-top: 10px;
+  padding: 24px;
+  background-color: white;
+}
+
+.comment-form{
+  margin-top: 20px;
+  .comment-form__text{
+    min-height: 100px;
+    min-width: 550px;
+  }
+  .comment-form__attention{
+    padding: 10px;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+  }
+  .comment-form__btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .comment-form__send{
+      width: 60%;
+      line-height: 48px;
+      background-color: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: white;
+      font-size: 18px;
+      border-radius: 100px;
+    }
+    .comment-form__icon{
+      color: white;
+      position: absolute;
+      left: 190px;
+      top: 17px;
+    }
+  }
+}
+
+.next-link{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  .btn{
+    text-decoration: none;
+    color: #3CCACE;
   }
 }
