@@ -1,23 +1,6 @@
 %body
-  %header.taitolhead
-    .taitolhead__headna
-      .taitolhead__headna__headmai
-        %h1.taitolhead__headna__headmai__icon1
-          = link_to '#' do
-            = image_tag ("logo.png") 
-        .taitolhead__headna__headmai__kenbox
-          %input{type: "text", class: "taitolhead__headna__headmai__input-box", "placeholder": "キーワードから探す"}
-          .taitolhead__headna__headmai__input-isu
-            = link_to '#' do
-              = image_tag ("icon-search 1.png")
-    .taitolhead__navi
-      %ul.taitolhead__navi__list
-        %li.taitolhead__navi__list__li1 
-          = link_to '#' do
-            %a#btn1 カテゴリー
-        %li.taitolhead__navi__list__li2
-          = link_to '#' do
-            %a#btn2 ブランド
+  .wrapper
+    = render "top-contents"
 .main
   .content
     .content-box
@@ -123,6 +106,5 @@
                   ★ 0
               .product__list__body__tax
                 (税込)
-
--# .wrapper
--#   = render "bottom-contents"
+.wrapper
+  = render "bottom-contents"
