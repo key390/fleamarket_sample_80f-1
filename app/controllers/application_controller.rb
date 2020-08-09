@@ -13,13 +13,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def production?
-    Rails.env.production?
-  end
-
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :age])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :lastname, :firstname, :last_hurigana, :first_hurigana, :birthday])
+  end
+  
+  def production?
+    Rails.env.production?
   end
 end
