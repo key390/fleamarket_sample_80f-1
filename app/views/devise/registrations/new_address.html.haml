@@ -1,30 +1,46 @@
-%h2 住所情報登録
-= form_for @address do |f|
-  = render "devise/shared/error_messages", resource: @address
-  .field
-    = f.label :post
-    %br/
-    = f.text_field :post
-  .field
-    = f.label :prefectures
-    %br/
-    = f.text_field :prefectures
-  .field
-    = f.label :city
-    %br/
-    = f.text_field :city
-  .field
-    = f.label :number
-    %br/
-    = f.text_field :number
-  .field
-    = f.label :building
-    %br/
-    = f.text_field :building
-  .field
-    = f.label :phone
-    %br/
-    = f.text_field :phone
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.signup-main
+  .signup-main__contents
+    %h2.signup-main__head
+      住所情報登録
+    = form_for @address do |f|
+      .signup-main__input
+        .signup-main__inf
+          = render "devise/shared/error_messages", resource: @address
+          = f.label :post,"郵便番号"
+          %span.signup-main__require
+            必須
+          %br/
+          = f.text_field :post
+        .signup-main__inf
+          = f.label :prefectures,"都道府県"
+          %span.signup-main__require
+            必須
+          %br/
+          = f.text_field :prefectures
+        .signup-main__inf
+          = f.label :city,"市区町村"
+          %span.signup-main__require
+            必須
+          %br/
+          = f.text_field :city
+        .signup-main__inf
+          = f.label :number,"番地"
+          %span.signup-main__require
+            必須
+          %br/
+          = f.text_field :number
+        .signup-main__inf
+          = f.label :building,"マンション名.ビル名"
+          %span.signup-main__require
+            任意
+          %br/
+          = f.text_field :building
+        .signup-main__inf
+          = f.label :phone,"電話番号"
+          %span.signup-main__require
+            任意
+          %br/
+          = f.text_field :phone
+        .actions
+          = f.submit "Sign up"
+          = render "devise/shared/links"
