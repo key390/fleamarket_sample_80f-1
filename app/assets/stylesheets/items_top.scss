@@ -55,9 +55,9 @@ h3{
 
 .productLists{
   width: 780px;
-    margin: 26px auto;
-    display: flex;
-    justify-content: space-around;
+  margin: 26px auto;
+  display: flex;
+  justify-content: space-around;
 }
 
 .productList{
@@ -74,16 +74,16 @@ h3{
 
 .productLists a{
   text-decoration: none;
-    position: relative;
+  position: relative;
 } 
 
 .productList--img {
   width: 220px;
-    height: 150px;
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    z-index: auto;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  z-index: auto;
 }
 
 figure {
