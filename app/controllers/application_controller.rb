@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
   
   private
 
+  def production?
+    Rails.env.production?
+  end
+
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
       username == Rails.application.credentials[:basic_auth][:user] &&
@@ -10,8 +14,5 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def production?
-    Rails.env.production?
-  end
-
+  
 end
