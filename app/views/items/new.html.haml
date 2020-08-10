@@ -72,7 +72,7 @@
               商品の状態
             .iteminfo__must
               ※必須
-          = f.text_field :status, placeholder:"指定なし",class: "nameform"
+          = f.collection_select :status_id ,Status.all, :id,:name
       .area
         .item
           .iteminfo
@@ -80,7 +80,7 @@
               発送元の地域
             .iteminfo__must
               ※必須
-          = f.text_field :area, placeholder:"指定なし",class: "nameform"
+          = f.collection_select :area_id ,Area.all, :id,:name
       .limit
         .item
           .iteminfo
@@ -88,7 +88,7 @@
               発送までの日数
             .iteminfo__must
               ※必須
-          = f.text_field :limit, placeholder:"指定なし",class: "nameform"   
+          = f.collection_select :limit_id ,Limit.all, :id,:name
       .delivery_cost 
         .item
           .iteminfo
@@ -96,7 +96,7 @@
               配送料の負担
             .iteminfo__must
               ※必須
-          = f.text_field :delivery_cost , placeholder:"指定なし",class: "nameform" 
+          = f.collection_select :delivery_cost_id ,DeliveryCost.all, :id,:name
       .price
         .item
           .iteminfo
