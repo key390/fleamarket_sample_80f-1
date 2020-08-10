@@ -1,0 +1,64 @@
+// コードレビュー願います
+// 見た目のビューなので関数式などは入っていないです
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+
+
+  %section.pickupContainer
+    %h2.head
+      ピックアップカテゴリー
+    .productBox
+      .productHead
+        %a{ href: "#" }
+          %h3.title 新規投稿商品
+      .productLists
+        - @items_index.each do |item|
+          .productList
+            %a{ href: "#" }
+              %figure.productList--img
+                = image_tag "#{}",size:"185x189" , alt:"商品写真"
+            .productList--body
+              %h3.name
+                = item.name
+              .details
+                %ul
+                  %li
+                    = item.price
+                  .en
+                    円
+                  %li
+                    %i.fa.fa-star.LikeIcon
+                    " 1
+                    "
+                %p.tax
+                  (税込)
+
+  %section.pickupContainer
+    %h2.head
+      ピックアップブランド
+    .productBox
+      .productHead
+        %a{ href: "#" }
+          %h3.title アーカイブ
+      .productLists
+        - @items_index.each do |item|
+          .productList
+            %a{ href: "#" }
+              %figure.productList--img
+                = image_tag "#{}",size:"185x189" , alt:"商品写真"
+            .productList--body
+              %h3.name
+                = item.name
+              .details
+                %ul
+                  %li
+                    = item.price
+                    円
+                  %li
+                    %i.fa.fa-star.LikeIcon
+                    " 1
+                    "
+                %p.tax
+                  (税込)
