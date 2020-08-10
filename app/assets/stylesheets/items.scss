@@ -1,5 +1,3 @@
-// コードレビュー願います
-// 見た目のビューなので関数式などは入っていないです
 html {
   background: #FFF;
 }
@@ -9,18 +7,17 @@ html {
 body {
   width: 100%;
   height: 100%;
-  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+  font-family: “Source Sans Pro”, Helvetica, Arial, “游ゴシック体“, “YuGothic”, “メイリオ“, “Meiryo”, sans-serif;
 }
-.taitolhead {
+.titlehead {
   padding: 0 60px;
-
-  &__headna {
+  &__headin {
     max-width: 1040px;
     width: 100%;
     min-height: 82px;
     margin: 0 auto;
     padding: 15px 0 0;
-    &__headmai{
+    &__headmain{
       position: relative;
       display: flex;
       align-items: center;
@@ -37,25 +34,26 @@ body {
           vertical-align: bottom;
         }
       }
-      &__kenbox{
+      &__searchbox{
         margin-left: auto;
         width: 100%;
         display: flex;
-      }
-      &__input-box{
-        width: calc(100% - 26px);
-        height: 36px;
-        padding: 0 0 0 5px;
-      }
-      &__input-isu{
-        width: 36px;
-        border: 0;
-        cursor: pointer;
-        background-color: #3CCACE;
-        padding: 6px;
-        img {
-          width: 100%;
-          vertical-align: bottom;
+        margin-bottom: 5px;
+        &__input-box{
+          width: calc(100% - 26px);
+          height: 36px;
+          padding: 0 0 0 5px;
+        }
+        button{
+          width: 36px;
+          border: 0;
+          cursor: pointer;
+          background-color: #3CCACE;
+          padding: 6px;
+          img {
+            width: 100%;
+            vertical-align: bottom;
+          }
         }
       }
     }
@@ -125,9 +123,9 @@ body {
     }
   }
 }
-.manini{
-  background: #f8f8f8;
-  &__hi{
+.photo{
+  background: #F8F8F8;
+  &__main{
     width: 100%;
     height: 560px;
     background-image: url(bg-mainVisual-pict_pc.jpg);
@@ -138,18 +136,18 @@ body {
     padding: 0 60px;
     display: flex;
     align-items: center;
-    &__ki{
+    &__life{
       max-width: 1280px;
       width: 100%;
       margin: 0 auto;
       padding: 35px 0 0 0;
-      &__taitosub{
+      &__titlesub{
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
         font-size: 60px;
         line-height: 1.2;
         color: #fff;
       }
-      &__taitosub2{
+      &__titlesub2{
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
         font-size: 18px;
         color: #fff;
@@ -182,7 +180,7 @@ body {
     }
   }
 }
-.topinin{
+.topelected{
   padding: 60px 20px;
   &__subu{
     text-align: center;
@@ -193,7 +191,7 @@ body {
     padding-bottom: 15px;
     position: relative;
     after{
-      content: "";
+      content: “”;
       width: 70px;
       height: 4px;
       background-color: #3CCACE;
@@ -203,7 +201,7 @@ body {
       transform: translateX(-50%);
     }
   }
-  &__lolo{
+  &__three{
     text-align: center;
     display: flex;
     max-width: 1020px;
@@ -340,26 +338,26 @@ body {
     }
   }
 }
-.topmimi{
+.photo2{
   background-image: url(bg-topMiddleDl-pict.jpg);
   background-position: bottom right;
   height: 400px;
   background-size: cover;
   display: flex;
   align-items: center;
-  &__mi1{
+  &__inbox{
     color: #fff;
     text-shadow: 0 0 5px rgba(0,0,0,0.4);
     text-align: left;
     max-width: 1040px;
     width: 100%;
     margin: 0 auto;
-    &__za{
+    &__one{
       font-size: 27px;
       font-weight: bold;
       line-height: 1.4;
     }
-    &__trtr{
+    &__two{
       font-size: 18px;
       margin: 20px 0 30px;
       line-height: 1.5;
@@ -381,10 +379,10 @@ body {
     }
   }
 }
-.topfufu{
+.topfeature{
   padding: 60px 100px;
   background-color: #fff;
-  &__hehe{
+  &__headname{
     font-size: 27px;
     text-align: center;
     margin: 0 0 40px;
@@ -393,7 +391,7 @@ body {
     padding-bottom: 15px;
     position: relative;
     after{
-      content: "";
+      content: “”;
       width: 70px;
       height: 4px;
       background-color: #3CCACE;
@@ -403,19 +401,19 @@ body {
       transform: translateX(-50%);
     }
   }
-  &__iteite{
+  &__itemthree{
     max-width: calc(1040px + 20px);
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    &__yuyu{
+    &__box{
       display: flex;
       flex-direction: column;
       width: calc(1 / 3 * 100%);
       text-align: center;
       padding: 0 20px;
-        &__rsrs{
+        &__picture{
           width: 70%;
           margin: 0 auto;
           line-height: 120px;
@@ -424,25 +422,25 @@ body {
         width: 100%;
         vertical-align: bottom;
       }
-      &__fdfd{
+      &__subt{
         margin: 38px 0 10px;
         font-size: 19px;
         font-weight: bold;
       }
-      &__wawa{
+      &__content{
         margin: 0 0 40px;
         font-size: 17px;
         font-weight: 200;
         text-align: left;
       }
     }
-    &__yuyu2{
+    &__box2{
       display: flex;
       flex-direction: column;
       width: calc(1 / 3 * 100%);
       text-align: center;
       padding: 0 20px;
-      &__rsrs2{
+      &__picture2{
         width: 70%;
         margin: 0 auto;
         line-height: 120px;
@@ -451,25 +449,25 @@ body {
         width: 100%;
         vertical-align: bottom;
       }
-      &__fdfd2{
+      &__subt2{
         margin: 38px 0 10px;
         font-size: 19px;
         font-weight: bold;
       }
-      &__wawa2{
+      &__content2{
         margin: 0 0 40px;
         font-size: 17px;
         font-weight: 200;
         text-align: left;
       }
     }
-    &__yuyu3{
+    &__box3{
       display: flex;
       flex-direction: column;
       width: calc(1 / 3 * 100%);
       text-align: center;
       padding: 0 20px;
-      &__rsrs3{
+      &__picture3{
         width: 70%;
         margin: 0 auto;
         line-height: 120px;
@@ -478,12 +476,12 @@ body {
         width: 100%;
         vertical-align: bottom;
       }
-      &__fdfd3{
+      &__subt3{
         margin: 38px 0 10px;
         font-size: 19px;
         font-weight: bold;
       }
-      &__wawa3{
+      &__content3{
         margin: 0 0 40px;
         font-size: 17px;
         font-weight: 200;
@@ -492,13 +490,13 @@ body {
     }
   }
 }
-.topaiai{
+.photo3{
   background-image: url(bg-appBanner-pict.jpg);
   padding: 100px 40px;
   position: relative;
   background-size: cover;
   background-position: center;
-  &__nbnb{
+  &__content{
     color: #fff;
     text-align: center;
     &__tyty {
@@ -531,7 +529,7 @@ body {
     }
   }
 }
-.foofoo{
+.top-under{
   padding: 60px 0;
   color: #fff;
   background-color: #272727;
@@ -591,3 +589,14 @@ body {
     width: 60%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+

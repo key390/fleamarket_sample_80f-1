@@ -1,94 +1,91 @@
-// コードレビュー願います
-// 見た目のビューなので関数式などは入っていないです
 %body
   .wrapper
     = render "top-contents"
-  .manini
-    .manini__hi
-      .manini__hi__ki
-        %h2.manini__hi__ki__taitosub
+  .photo
+    .photo__main
+      .photo__main__life
+        %h2.photo__main__life__titlesub
           %br 人生を変えるフリマアプリ
-        %p.manini__hi__ki__taitosub2
+        %p.photo__main__life__titlesub2
           FURIMAはだれでもかんたんに出品・購入できる
           %br フリマアプリです
-        .manini__hi__ki__btn
-          .manini__hi__ki__btn__bt1
+        .photo__main__life__btn
+          .photo__main__life__btn__bt1
             = link_to '#' do
               = image_tag ("http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg")
-          .manini__hi__ki__btn__bt2
+          .photo__main__life__btn__bt2
             = link_to '#' do
               = image_tag ("http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg")
-  .topinin
-    %h2.topinin__subu
+  .topelected
+    %h2.topelected__subu
       FURIMAが選ばれる3つの理由
       %after
-    %ul.topinin__lolo
-      %li.topinin__lolo__lk1
-        .topinin__lolo__lk1__gt
-          %span.topinin__lolo__lk1__gt__na 1
+    %ul.topelected_three
+      %li.topelected__three__lk1
+        .topelected__three__lk1__gt
+          %span.topelected__three__lk1__gt__na 1
           = image_tag ("pict-reason-01.jpg")
-        %h3.topinin__lolo__lk1__rt
+        %h3.topelected__three__lk1__rt
           %span 3分
           ですぐに出品
-        %p.topinin__lolo__lk1__rt2
+        %p.topelected__three__lk1__rt2
           スマホで入力するだけで簡単に出品できる!
-      %li.topinin__lolo__lk2
-        .topinin__lolo__lk2__gt2
-          %span.topinin__lolo__lk2__gt2__na2 2
+      %li.topelected__three__lk2
+        .topelected__three__lk2__gt2
+          %span.topelected__three__lk2__gt2__na2 2
           = image_tag ("pict-reason-02.jpg")
-        %h3.topinin__lolo__lk2__ol
+        %h3.topelected__three__lk2__ol
           %span シンプル
           で使いやすい
-        %p.topinin__lolo__lk2__rt3
+        %p.topelected__three__lk2__rt3
           めんどくさい入力は必要なく、検索も購入もスムーズ！
-      %li.topinin__lolo__lk3
-        .topinin__lolo__lk3__gt3
-          %span.topinin__lolo__lk3__gt3__na3 3
+      %li.topelected__three__lk3
+        .topelected__three__lk3__gt3
+          %span.topelected__three__lk3__gt3__na3 3
           = image_tag ("pict-reason-03.jpg")
-        %h3.topinin__lolo__lk3__ds
+        %h3.topelected__three__lk3__ds
           手数料
           %span 業界最安
-        %p.topinin__lolo__lk3__rt4
+        %p.topelected__three__lk3__rt4
           最大3%でお得に出品&購入！
-  .topmimi
-    .topmimi__mi1
-      %h2.topmimi__mi1__za 会員数日本一位
-      %p.topmimi__mi1__trtr
+  .photo2
+    .photo2__inbox
+      %h2.photo2__inbox__one 会員数日本一位
+      %p.photo2__inbox__two
         FURIMは、フリマアプリで最も人気。
         %br 出品・購入回数も業界最多です!
         ほしかったあの商品に出会えるかもしれません。
-      .topmimi__mi1__btbt
-        .topmimi__mi1__btbt__t1
+      .photo2__inbox__btbt
+        .photo2__inbox__btbt__t1
           = link_to '#' do
             = image_tag ("http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg")
-        .topmimi__mi1__btbt__t2
+        .photo2__inbox__btbt__t2
           = link_to '#' do
             = image_tag ("http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg")
-  .topfufu
-    %h2.topfufu__hehe
+  .topfeature
+    %h2.topfeature__headname
       FURIMAの特徴
       %after
-    .topfufu__iteite
-      .topfufu__iteite__yuyu
-        .topfufu__iteite__yuyu__rsrs
+    .topfeature__itemthree
+      .topfeature__itemthree__box
+        .topfeature__itemthree__box__picture
           = image_tag ("icon-01.png")
-        %h3.topfufu__iteite__yuyu__fdfd 簡単に売り買いできる
-        %p.topfufu__iteite__yuyu__wawa
+        %h3.topfeature__itemthree__box__subt 簡単に売り買いできる
+        %p.topfeature__itemthree__box__content
           スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
-      .topfufu__iteite__yuyu2
-        .topfufu__iteite__yuyu2__rsrs2
+      .topfeature__itemthree__box2
+        .topfeature__itemthree__box2__picture2
           = image_tag ("icon-03.png")
-        %h3.topfufu__iteite__yuyu2__fdfd2 売上金は即日振込みに対応
-        %p.topfufu__iteite__yuyu2__wawa2
+        %h3.topfeature__itemthree__box2__subt2 売上金は即日振込みに対応
+        %p.topfeature__itemthree__box2__content2
           午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
-      .topfufu__iteite__yuyu3
-        .topfufu__iteite__yuyu3__rsrs3
+      .topfeature__itemthree__box3
+        .topfeature__itemthree__box3__picture3
           = image_tag ("icon-04.png")
-        %h3.topfufu__iteite__yuyu3__fdfd3 様々な支払いに対応
-        %p.topfufu__iteite__yuyu3__wawa3
+        %h3.topfeature__itemthree__box3__subt3 様々な支払いに対応
+        %p.topfeature__itemthree__box3__content3
           お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
   .wrapper
     = render "items_top"
   .wrapper
     = render "bottom-contents"
-
