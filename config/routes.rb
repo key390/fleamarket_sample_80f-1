@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     root 'items#index'
 
   resources :items, only: [:index,:new,:create,:show]
+  resources :cards, only: [:new, :create,:show,:delete]
 
 end
