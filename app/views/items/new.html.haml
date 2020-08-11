@@ -41,22 +41,23 @@
             .iteminfo__must
               ※必須
           = f.text_field :name, placeholder:"商品名記載",class: "nameform"
-        .explain
-          .item
-            .iteminfo
-              .iteminfo__name
-                説明
-              .iteminfo__must
-                ※必須
-            = f.text_area :explain, placeholder:"詳細記載",class: "explainform" 
-      .category 
+      .explain
         .item
           .iteminfo
             .iteminfo__name
-              カテゴリー
+              説明
             .iteminfo__must
               ※必須
-          = f.text_field :category_id, placeholder:"指定なし",class: "nameform"        
+          = f.text_area :explain, placeholder:"詳細記載",class: "explainform" 
+      .listing-form-box
+        .listing-product-detail__category
+          = f.label 'カテゴリー', class: 'listing-default__label'
+          %span.listing-default--require 必須
+          .listing-select-wrapper
+            .listing-select-wrapper__box
+              = f.select :category, @category_parent_array, {}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+              %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
+             
       .brand
         .item
           .iteminfo
