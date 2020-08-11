@@ -1,17 +1,21 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.signup-main
+  .signup-main__contents
+    %h2.signup-main__head
+      ログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .signup-main__input
+        .signup-main__inf
+          = f.label :email,"メールアドレス"
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "sample@gmail.com", class: "signup-main__field"
+        .signup-main__inf
+          = f.label :password,"パスワード"
+          %br/
+          = f.password_field :password, autocomplete: "current-password", placeholder: "7文字以上", class: "signup-main__field"
+        - if devise_mapping.rememberable?
+        .signup-main__inf
+          = f.check_box :remember_me
+          = f.label :remember_me
+        .actions
+          = f.submit "完了", class: "signup-main__submit"
+            = render "devise/shared/links"

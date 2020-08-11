@@ -96,16 +96,10 @@ body {
           margin-left: auto;
           display: flex;
           &__lis3{
+            display: flex;
             color: #333;
             line-height: 38px;
             padding: 0 0 0 16px;
-            a{
-              display: flex;
-              align-items: center;
-              color: #333;
-              text-decoration: none;
-              line-height: 32px;
-            }
           }
           &__lis4{
             color: #333;
@@ -122,6 +116,14 @@ body {
         }
     }
   }
+}
+.login {
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  line-height: 32px;
 }
 .photo{
   background: #F8F8F8;
@@ -589,7 +591,6 @@ body {
     width: 60%;
   }
 }
-
 
 
 
