@@ -1,0 +1,45 @@
+.signup-main
+  .signup-main__contents
+    %h2.signup-main__head
+      住所情報登録
+    = form_for @address do |f|
+      .signup-main__input
+        .signup-main__inf
+          = render "devise/shared/error_messages", resource: @address
+          = f.label :post,"郵便番号"
+          %span.signup-main__require
+            必須
+          %br/
+          = f.text_field :post, placeholder: "123-4567", class: "signup-main__field"
+        .signup-main__inf
+          = f.label :prefectures,"都道府県"
+          %span.signup-main__require
+            必須
+          %br/
+          = f.text_field :prefectures, placeholder: "東京都", class: "signup-main__field"
+        .signup-main__inf
+          = f.label :city,"市区町村"
+          %span.signup-main__require
+            必須
+          %br/
+          = f.text_field :city, placeholder: "八王子市", class: "signup-main__field"
+        .signup-main__inf
+          = f.label :number,"番地"
+          %span.signup-main__require
+            必須
+          %br/
+          = f.text_field :number, placeholder: "館町32-2", class: "signup-main__field"
+        .signup-main__inf
+          = f.label :building,"マンション名.ビル名"
+          %span.signup-main__require
+            必須（お部屋番号は任意）
+          %br/
+          = f.text_field :building, placeholder: "hogeビル307号室", class: "signup-main__field"
+        .signup-main__inf
+          = f.label :phone,"電話番号"
+          %span.signup-main__require
+            任意
+          %br/
+          = f.text_field :phone, placeholder: "09012345678", class: "signup-main__field"
+        .actions
+          = f.submit "完了", class: "signup-main__submit"

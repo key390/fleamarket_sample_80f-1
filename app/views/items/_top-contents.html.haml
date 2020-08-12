@@ -1,0 +1,24 @@
+%header.titlehead
+  .titlehead__headin
+    .titlehead__headin__headmain
+      %h1.titlehead__headin__headmain__icon1
+        = link_to '/' do
+          = image_tag ("logo.png")
+      .titlehead__headin__headmain__searchbox
+        %input{type: "text", class: "titlehead__headin__headmain__searchbox__input-box", "placeholder": "キーワードから探す"}
+        %button{type: "submit"}
+          .titlehead__headin__headmain__searchbox__input-box__iconbox
+            = image_tag ("icon-search 1.png")
+    .titlehead__headin__navi
+      %ul.titlehead__headin__navi__list
+        %li.titlehead__headin__navi__list__li1
+          %a{href: '#' , id: 'btn1'} カテゴリー
+        %li.titlehead__headin__navi__list__li2
+          %a{href: '#' , id: 'btn2'} ブランド
+      %ul.titlehead__headin__navi__list2
+        %li.titlehead__headin__navi__list2__lis3
+          - if user_signed_in?
+            = link_to "マイページ", "#"
+          - else
+            = link_to "新規登録", new_user_registration_path, class: "login"
+            = link_to "ログイン", new_user_session_path

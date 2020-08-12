@@ -1,3 +1,14 @@
+// コードレビュー願います
+// 見た目のビューなので関数式などは入っていないです
 @import "reset";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "items";
 @import "items.new";
+
+@import "modules/user";
+
+@import "items.show";
+@import "items_top";
+
+@import "item_buys";

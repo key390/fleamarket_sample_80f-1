@@ -1,0 +1,50 @@
+#__buybox
+  .buycontent
+    .buycontent__buytitle
+      .buycontent__buytitle__bicon
+        = link_to '/' do
+          = image_tag ("logo.png")
+    .buycontent__confirmation
+      .buycontent__confirmation__inputbox
+        %h2.buycontent__confirmation__inputbox__title 購入内容の確認
+      .buycontent__confirmation__itembox
+        .buycontent__confirmation__itembox__itemicon
+          .buycontent__confirmation__itembox__itemicon__photo
+            = image_tag ("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png")
+          .buycontent__confirmation__itembox__itemicon__namebox
+            %p.buycontent__confirmation__itembox__itemicon__namebox__name さばさばさば
+            %p.buycontent__confirmation__itembox__itemicon__namebox__namecontent
+              %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__coin 送料込み (税込)
+              %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__price ¥30000000
+      .buycontent__confirmation__paymentbox
+        .buycontent__confirmation__paymentbox__payment
+          %span 支払い金額
+          %span.buycontent__confirmation__paymentbox__payment__pp ¥30000000
+      .buycontent__confirmation__methodbox
+        .buycontent__confirmation__methodbox__method
+          %h3.buycontent__confirmation__methodbox__method__paymentmethod 支払い方法
+        %a.buycontent__confirmation__methodbox__registerbox
+          = link_to '#' do
+            %span.buycontent__confirmation__methodbox__registerbox__font1 登録してください
+      .buycontent__confirmation__deliverybox
+        .buycontent__confirmation__deliverybox__delivery
+          %h3.buycontent__confirmation__deliverybox__delivery__shippingaddress 配送先
+        %a.buycontent__confirmation__deliverybox__registerbox2
+          = link_to '#' do
+            %span.buycontent__confirmation__deliverybox__registerbox2__font2 登録してください
+      .buycontent__confirmation__completebox
+        .buycontent__confirmation__completebox__complete
+          %p.buycontent__confirmation__completebox__complete__red 配送先と支払い方法の入力を完了してください。
+        .buycontent__confirmation__completebox__btn
+          %button{type: "button" , href: '#' , class: 'buycontent__confirmation__completebox__complete__btn__b1'}購入する
+  .footerbottom
+    .footerbottom__threebox
+      %ul.footerbottom__threebox__three
+        %li.footerbottom__threebox__three__displaybox
+          %a{href: '#' , class: 'footerbottom__threebox__three__displaybox__display'}プライバシーポリシー
+        %li.footerbottom__threebox__three__displaybox2
+          %a{href: '#' , class: 'footerbottom__threebox__three__displaybox2__display2'}FURIMA利用規約
+  .logobox
+    = link_to '/' do
+      = image_tag ("logo-white.png")
+  %p.logoc © FURIMA
