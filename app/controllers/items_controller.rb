@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.includes(:images)
-    # @parents = Category.where(ancestry: nil)
+
   end
 
   def new
@@ -24,6 +24,8 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path 
+    else 
+      redirect_to new_item_path
     end  
   end  
 
