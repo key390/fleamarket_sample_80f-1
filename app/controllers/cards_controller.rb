@@ -5,7 +5,7 @@ class CardsController < ApplicationController
     redirect_to action: "show" if card.exists?
   end
 
-  def create
+  def pay
     Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"] 
     if params['payjp-token'].blank?
       redirect_to action: "new"
@@ -17,7 +17,7 @@ class CardsController < ApplicationController
       if @card.save
         redirect_to action:"show"
       else
-        redirect_to action:"create"
+        redirect_to action:"pay"
       end
     end
   end
