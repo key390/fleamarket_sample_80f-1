@@ -1,26 +1,111 @@
 %body
   %header.taitolhead
-    .headna 
-      .headmai
-        %h1.icon1
+    .taitolhead__headna
+      .taitolhead__headna__headmai
+        %h1.taitolhead__headna__headmai__icon1
           = link_to '#' do
             = image_tag ("logo.png") 
-        .kenbox
-          %input{type: "text", class: "input-box__text", "placeholder": "キーワードから探す"}
-          %input{type: "submit", class: "input-box__isu", } 
-.exhibition
-  .exhibition_main
-    .exhibition__1st
-      .exhibition__1st__images
-      .exhibition__1st__name
-      .exhibition__1st__text
-    .exhibition__2nd
-      .exhibition__2nd__category
-      .exhibition__2nd__brand
-      .exhibition__2nd__status
-    .exhibition__3rd
-    .exhibition__4th
-    .exhibition__5th
-  .exhibition_bottom
+        .taitolhead__headna__headmai__kenbox
+          %input{type: "text", class: "taitolhead__headna__headmai__input-box", "placeholder": "キーワードから探す"}
+          .taitolhead__headna__headmai__input-isu
+            = link_to '#' do
+              = image_tag ("icon-search 1.png")
+    .taitolhead__navi
+      %ul.taitolhead__navi__list
+        %li.taitolhead__navi__list__li1 
+          = link_to '#' do
+            %a#btn1 カテゴリー
+        %li.taitolhead__navi__list__li2
+          = link_to '#' do
+            %a#btn2 ブランド
+.form
+  .contents
+    = form_with model:@item, local:true do |f|
+      .images
+        .constraint
+          .imageindicate
+            出品画像
+          .imagemust 
+            必須
+        .hidden-content
+          = f.fields_for :images do |i|
+            = i.file_field :image, class: "hidden-field"
+            %input{class:"hidden-field", type: "file", name: "item[images_attributes][1][image]", id: "item_images_attributes_1_image" }
+            %input{class:"hidden-field", type: "file", name: "item[images_attributes][2][image]", id: "item_images_attributes_2_image" }
+            %input{class:"hidden-field", type: "file", name: "item[images_attributes][3][image]", id: "item_images_attributes_3_image" }
+      .name
+        .item
+          .iteminfo
+            .iteminfo__name
+              商品名
+            .iteminfo__must
+              ※必須
+          = f.text_field :name, placeholder:"商品名記載",class: "nameform"
+      .explain
+        .item
+          .iteminfo
+            .iteminfo__name
+              説明
+            .iteminfo__must
+              ※必須
+          = f.text_area :explain, placeholder:"詳細記載",class: "explainform" 
+      .listing-form-box
+        .listing-product-detail__category
+          = f.label 'カテゴリー', class: 'listing-default__label'
+          %span.listing-default--require 必須
+          .listing-select-wrapper
+            .listing-select-wrapper__box
+              = f.collection_select :category_id, @category_parent_array, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+              %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
+             
+      .brand
+        .item
+          .iteminfo
+            .iteminfo__name
+              ブランド
+            .iteminfo__must
+              ※任意
+          = f.text_field :brand, placeholder:"指定なし",class: "nameform"
+      .status
+        .item
+          .iteminfo
+            .iteminfo__name
+              商品の状態
+            .iteminfo__must
+              ※必須
+          = f.collection_select :status_id ,Status.all, :id,:name
+      .area
+        .item
+          .iteminfo
+            .iteminfo__name
+              発送元の地域
+            .iteminfo__must
+              ※必須
+          = f.collection_select :area_id ,Area.all, :id,:name
+      .limit
+        .item
+          .iteminfo
+            .iteminfo__name
+              発送までの日数
+            .iteminfo__must
+              ※必須
+          = f.collection_select :limit_id ,Limit.all, :id,:name
+      .delivery_cost 
+        .item
+          .iteminfo
+            .iteminfo__name
+              配送料の負担
+            .iteminfo__must
+              ※必須
+          = f.collection_select :delivery_cost_id ,DeliveryCost.all, :id,:name
+      .price
+        .item
+          .iteminfo
+            .iteminfo__name
+              価格
+            .iteminfo__must
+              ※必須
+          = f.text_field :price , placeholder:"指定なし",class: "nameform"            
 
-    
+      .new
+        = f.submit "出品する",class: "newbtn"            

@@ -1,95 +1,112 @@
-.exhibition{ 
-}
-
-.exhibition_main{
-
-}
-
-.exhibition__1st{
-  &__images{
-    height: 200px;
-    
-
-  }
-  &__name{
-    height: 200px;
-
-  }
-  &__text{
-    height: 200px;
+.form{
+  background-color:#EEEEEE	;
+  height: 100vh;
+  padding:0 50px;
+  width: 1600px;
+  
+  .contents{
+    width: 1300px;
+    display: flex;
 
   }
 }
-
-.exhibition__2nd{
-  &__category{
-    height: 200px;
-    
-
+  .constraint{
+    display: flex;
   }
-  &__brand{
-    height: 200px;
 
+  .images{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
   }
-  &__status{
-    height: 200px;
 
+  .imageindicate{
+    width:110px;
   }
+  .imagemust{
+    color: red;
+    margin-left: 5px;
+    width: 100px;
+  }
+
+  .hidden-content{
+  padding: 0 40px;
+  display: flex;
+  padding-top: 15px;
+  justify-content: space-around;
+  }
+
+
+.name{
+  margin-top: 30px;
+  margin-bottom: 16px;
+  padding-top: 15px;
 
 }
+    .item{
+      display: flex;
+      justify-content: space-around;
+      padding: 0 80px;
+      .iteminfo{
+        display: flex;
+        &__name{
+          color:black;
+          width: 120px;
 
-.exhibition__3rd{
-  &__images{
-    height: 200px;
-    
-
-  }
-  &__name{
-    height: 200px;
-
-  }
-  &__text{
-    height: 200px;
-
-  }
-
+        }
+        &__must{
+          color: red;
+          margin-left: 5px;
+          width: 100px;
+        }
+      }
+      .nameform{
+        width: 400px;
+        background-color: white;
+      }
+    }
+.explain{
+  margin-bottom: 16px;
+  padding-top: 15px;
 }
 
-.exhibition__4th{
-  &__images{
-    height: 200px;
-    
-
-  }
-  &__name{
-    height: 200px;
-
-  }
-  &__text{
-    height: 200px;
-
-  }
-
+.explainform{
+  height: 150px;
+  width:400px
 }
 
-.exhibition__5th{
-  &__images{
-    height: 200px;
-    
-
-  }
-  &__name{
-    height: 200px;
-
-  }
-  &__text{
-    height: 200px;
-
-  }
-
+.category{
+  margin-bottom: 16px;
 }
 
-.exhibition_bottom{
-  height: 200px;
+.brand{
+  margin-bottom: 16px;
+}
 
+.status{
+  margin-bottom: 16px;
+}
+
+.area{
+  margin-bottom: 16px;
+}
+
+.limit{
+  margin-bottom: 16px;
+}
+.delivery_cost {
+  margin-bottom: 16px;
+}
+
+.price{
+  margin-bottom: 16px;
+}
+
+
+.new{
+  text-align: center;
+  margin-top: 30px;
+}
+.newbtn{
+  background-color: red;
 }
