@@ -23,13 +23,15 @@
       .buycontent__confirmation__methodbox
         .buycontent__confirmation__methodbox__method
           %h3.buycontent__confirmation__methodbox__method__paymentmethod 支払い方法
-        %a{href: '#' , class: 'buycontent__confirmation__methodbox__registerbox'}
-          %span.buycontent__confirmation__methodbox__registerbox__font1 登録してください
+        %a.buycontent__confirmation__methodbox__registerbox
+          = link_to '#' do
+            %span.buycontent__confirmation__methodbox__registerbox__font1 登録してください
       .buycontent__confirmation__deliverybox
         .buycontent__confirmation__deliverybox__delivery
           %h3.buycontent__confirmation__deliverybox__delivery__shippingaddress 配送先
-        %a{href: '#' , class: 'buycontent__confirmation__deliverybox__registerbox2'}
-          %span.buycontent__confirmation__deliverybox__registerbox2__font2 登録してください
+        %a.buycontent__confirmation__deliverybox__registerbox2
+          = link_to '#' do
+            %span.buycontent__confirmation__deliverybox__registerbox2__font2 登録してください
       .buycontent__confirmation__completebox
         .buycontent__confirmation__completebox__complete
           %p.buycontent__confirmation__completebox__complete__red 配送先と支払い方法の入力を完了してください。
