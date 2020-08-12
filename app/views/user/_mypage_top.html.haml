@@ -19,6 +19,3 @@
         %li.titlehead__headin__navi__list2__lis3
           - if user_signed_in?
             = link_to "マイページ", user_path(current_user)
-          - else
-            = link_to "新規登録", new_user_registration_path, class: "login"
-            = link_to "ログイン", new_user_session_path
