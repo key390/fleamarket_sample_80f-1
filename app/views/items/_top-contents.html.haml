@@ -12,9 +12,13 @@
     .titlehead__headin__navi
       %ul.titlehead__headin__navi__list
         %li.titlehead__headin__navi__list__li1
-          %a{href: '#' , id: 'btn1'} カテゴリー
+          %a#btn1
+            = link_to "#" do
+              ブランド
         %li.titlehead__headin__navi__list__li2
-          %a{href: '#' , id: 'btn2'} ブランド
+          %a#btn2
+            = link_to "#" do
+              カテゴリー
       %ul.titlehead__headin__navi__list2
         %li.titlehead__headin__navi__list2__lis3
           - if user_signed_in?
