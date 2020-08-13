@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_030622) do
+ActiveRecord::Schema.define(version: 2020_08_12_053853) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "post", null: false
@@ -45,10 +45,13 @@ ActiveRecord::Schema.define(version: 2020_08_11_030622) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_categories_on_ancestry"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
+
+    t.text "image", null: false
     t.bigint "item_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -58,15 +61,15 @@ ActiveRecord::Schema.define(version: 2020_08_11_030622) do
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "explain"
-    t.string "status", null: false
-    t.integer "delivery_cost", null: false
-    t.string "area", null: false
-    t.string "limit", null: false
     t.integer "price", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "category_id"
-    t.integer "brand_id"
+    t.integer "status_id"
+    t.integer "delivery_cost_id"
+    t.integer "area_id"
+    t.integer "limit_id"
+    t.string "brand"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
