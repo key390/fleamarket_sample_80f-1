@@ -1,0 +1,31 @@
+.mypage-side {
+  font-size: 18px;
+  display: block;
+  background-color: #f2f2f2;
+  width: 20vw;
+  height: 100vh;
+}
+.mypage-side-box {
+  font-size: 16px;
+  font-weight: bold;
+  &__exhibition {
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+  &__exhibited {
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+  &__plofile {
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+  &__card {
+  margin-bottom: 20px;
+    padding-left: 0;
+  }
+  &__logout {
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+}

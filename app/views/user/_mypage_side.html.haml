@@ -1,0 +1,19 @@
+.mypage-side
+  %ul.mypage-side-box
+    マイページメニュー
+  %br
+    %li.mypage-side-box__exhibition
+      = link_to "#", class: "link_exhibition" do
+        出品する
+    %li.mypage-side-box__exhibited
+      = link_to "#", class: "link_exhibited" do
+        出品中の商品
+    %li.mypage-side-box__plofile
+      = link_to "#", class: "link_plofile" do
+        本人情報
+    %li.mypage-side-box__card
+      = link_to "#", class: "link_card" do
+        支払い方法
+    %li.mypage-side-box__logout
+      = link_to( destroy_user_session_path, method: :delete, class: "link_logout") do
+        ログアウト

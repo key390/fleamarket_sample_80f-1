@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
     root 'items#index'
 
+  resources :user, only: [:show]
 
   resources :items, only: [:index,:new,:create] do
     collection do
