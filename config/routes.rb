@@ -18,6 +18,22 @@ Rails.application.routes.draw do
   end
 
   resources :items, only: [:index,:new,:create,:show]
+  
+  resources :cards, only: [:new,:show,] do
+    collection do
+      post 'show', to: 'cards#show'
+      post 'pay', to: 'cards#pay'
+      post 'delete', to: 'cards#delete'
+    end
+  end
+
+  resources :purchase, only: [:index] do
+    collection do
+      get 'index', to: 'purchase#index'
+      post 'pay', to: 'purchase#pay'
+      get 'done', to: 'purchase#done'
+    end
+  end
 
 
 end
