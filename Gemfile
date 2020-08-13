@@ -88,3 +88,5 @@ gem 'font-awesome-sass'
 gem 'payjp'
 
 gem "jquery-rails"
+
+gem 'dotenv-rails'

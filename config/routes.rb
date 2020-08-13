@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     root 'items#index'
 
   resources :items, only: [:index,:new,:create,:show]
-  resources :cards, only: [:new,:show] do
+  resources :cards, only: [:new,:show,] do
     collection do
       post 'show', to: 'cards#show'
       post 'pay', to: 'cards#pay'
