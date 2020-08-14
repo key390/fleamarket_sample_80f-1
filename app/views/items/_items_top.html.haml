@@ -25,10 +25,6 @@
                     = item.price
                   .en
                     円
-                  %li
-                    %i.fa.fa-star.LikeIcon
-                    " 1
-                    "
                 %p.tax
                   (税込)
           -# -if product.purchaser_id.present?  在庫切れ表示をする
@@ -48,25 +44,29 @@
             %h3.topic
               レディース
             .productList
-              %a{ href: "#" }
-                %figure.productList--img
-                  = image_tag @last_ladies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
-              .productList--body
-                %h3.name
-                  = @last_ladies_item.name
-                .details
-                  %ul
-                    %li
-                      = @last_ladies_item.price
-                    .en
-                    円
-                    %li
-                  %p.tax
-                    (税込)
-          -# -if product.purchaser_id.present?  在庫切れ表示をする
-              .items-box_photo__sold
-                .items-box_photo__sold__inner
-                  sold
+              - if @last_ladies_item == nil
+                %h3
+                  このカテゴリの新規投稿商品はありません。
+              - else
+                %a{ href: "#" }
+                  %figure.productList--img
+                    = image_tag @last_ladies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
+                .productList--body
+                  %h3.name
+                    = @last_ladies_item.name
+                  .details
+                    %ul
+                      %li
+                        = @last_ladies_item.price
+                      .en
+                      円
+                      %li
+                    %p.tax
+                      (税込)
+            -# -if product.purchaser_id.present?  在庫切れ表示をする
+                .items-box_photo__sold
+                  .items-box_photo__sold__inner
+                    sold
 
       .productBox
         .productHead
@@ -74,49 +74,57 @@
             %h3.topic
               メンズ
             .productList
-              %a{ href: "#" }
-                %figure.productList--img
-                  = image_tag @last_mens_item.images[0].image.url,size:"250x200" , alt:"商品写真"
-              .productList--body
-                %h3.name
-                  =@last_mens_item.name
-                .details
-                  %ul
-                    %li
-                      = @last_mens_item.price
-                    .en
-                      円
-                    %li
-                  %p.tax
-                    (税込)
-            -# -if product.purchaser_id.present?  在庫切れ表示をする
-              .items-box_photo__sold
-                .items-box_photo__sold__inner
-                  sold
+              - if @last_mens_item == nil
+                %h3
+                  このカテゴリの新規投稿商品はありません。
+              - else
+                %a{ href: "#" }
+                  %figure.productList--img
+                    = image_tag @last_mens_item.images[0].image.url,size:"250x200" , alt:"商品写真"
+                .productList--body
+                  %h3.name
+                    =@last_mens_item.name
+                  .details
+                    %ul
+                      %li
+                        = @last_mens_item.price
+                      .en
+                        円
+                      %li
+                    %p.tax
+                      (税込)
+              -# -if product.purchaser_id.present?  在庫切れ表示をする
+                .items-box_photo__sold
+                  .items-box_photo__sold__inner
+                    sold
       .productBox
         .productHead
           %a{ href: "#" }
             %h3.topic
               ベビー・キッズ
             .productList
-              %a{ href: "#" }
-                %figure.productList--img
-                  = image_tag @last_babies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
-              .productList--body
-                %h3.name
-                  = @last_babies_item.name
-                .details
-                  %ul
-                    %li
-                      = @last_babies_item.price
-                    .en
-                    円
-                  %p.tax
-                    (税込)
-            -# -if product.purchaser_id.present?  在庫切れ表示をする
-              .items-box_photo__sold
-                .items-box_photo__sold__inner
-                  sold
+              - if @last_babies_item == nil
+                %h3
+                  このカテゴリの新規投稿商品はありません。
+              - else
+                %a{ href: "#" }
+                  %figure.productList--img
+                    = image_tag @last_babies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
+                .productList--body
+                  %h3.name
+                    = @last_babies_item.name
+                  .details
+                    %ul
+                      %li
+                        = @last_babies_item.price
+                      .en
+                      円
+                    %p.tax
+                      (税込)
+              -# -if product.purchaser_id.present?  在庫切れ表示をする
+                .items-box_photo__sold
+                  .items-box_photo__sold__inner
+                    sold
 
       .productBox
         .productHead
@@ -124,24 +132,28 @@
             %h3.topic
               家電・スマホ・カメラ
             .productList
-              %a{ href: "#" }
-                %figure.productList--img
-                  = image_tag@last_appliances_item.images[0].image.url,size:"250x200" , alt:"商品写真"
-              .productList--body
-                %h3.name
-                  = @last_appliances_item.name
-                .details
-                  %ul
-                    %li
-                      = @last_appliances_item.price
-                    .en
-                    円
-                  %p.tax
-                    (税込)
-      -#       -# -if product.purchaser_id.present?  在庫切れ表示をする
-      -#         .items-box_photo__sold
-      -#           .items-box_photo__sold__inner
-      -#             sold
+              - if @last_appliances_item == nil
+                %h3
+                  このカテゴリの新規投稿商品はありません。
+              - else
+                %a{ href: "#" }
+                  %figure.productList--img
+                    = image_tag @last_appliances_item.images[0].image.url,size:"250x200" , alt:"商品写真"
+                .productList--body
+                  %h3.name
+                    = @last_appliances_item.name
+                  .details
+                    %ul
+                      %li
+                        = @last_appliances_item.price
+                      .en
+                      円
+                    %p.tax
+                      (税込)
+                -if product.purchaser_id.present?  在庫切れ表示をする
+                  .items-box_photo__sold
+                    .items-box_photo__sold__inner
+                      sold
 
 
 
