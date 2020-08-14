@@ -1,14 +1,11 @@
-// コードレビュー願います
-// 見た目のビューなので関数式などは入っていないです
 !!!
 %html{lang: "ja"}
   %head
     %meta{charset: "utf-8"}
 
-
   %section.pickupContainer
     %h2.head
-      ピックアップカテゴリー
+      新規投稿商品
     .productBox
       .productHead
         %a{ href: "#" }
@@ -18,7 +15,7 @@
           .productList
             %a{ href: "#" }
               %figure.productList--img
-                = image_tag "#{}",size:"185x189" , alt:"商品写真"
+                = image_tag item.images[0].image.url, size:"250x200" , alt:"商品写真"
             .productList--body
               %h3.name
                 = item.name
@@ -34,31 +31,121 @@
                     "
                 %p.tax
                   (税込)
+          -# -if product.purchaser_id.present?  在庫切れ表示をする
+            .items-box_photo__sold
+              .items-box_photo__sold__inner
+                sold
+      .pagenation
+        = paginate @items_index
 
   %section.pickupContainer
     %h2.head
-      ピックアップブランド
-    .productBox
-      .productHead
-        %a{ href: "#" }
-          %h3.title アーカイブ
-      .productLists
-        - @items_index.each do |item|
-          .productList
-            %a{ href: "#" }
-              %figure.productList--img
-                = image_tag "#{}",size:"185x189" , alt:"商品写真"
-            .productList--body
-              %h3.name
-                = item.name
-              .details
-                %ul
-                  %li
-                    = item.price
+      ピックアップカテゴリ
+    .productBoxes
+      .productBox
+        .productHead
+          %a{ href: "#" }
+            %h3.topic
+              レディース
+            .productList
+              %a{ href: "#" }
+                %figure.productList--img
+                  = image_tag @last_ladies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
+              .productList--body
+                %h3.name
+                  = @last_ladies_item.name
+                .details
+                  %ul
+                    %li
+                      = @last_ladies_item.price
+                    .en
                     円
-                  %li
-                    %i.fa.fa-star.LikeIcon
-                    " 1
-                    "
-                %p.tax
-                  (税込)
+                    %li
+                  %p.tax
+                    (税込)
+          -# -if product.purchaser_id.present?  在庫切れ表示をする
+              .items-box_photo__sold
+                .items-box_photo__sold__inner
+                  sold
+
+      .productBox
+        .productHead
+          %a{ href: "#" }
+            %h3.topic
+              メンズ
+            .productList
+              %a{ href: "#" }
+                %figure.productList--img
+                  = image_tag @last_mens_item.images[0].image.url,size:"250x200" , alt:"商品写真"
+              .productList--body
+                %h3.name
+                  =@last_mens_item.name
+                .details
+                  %ul
+                    %li
+                      = @last_mens_item.price
+                    .en
+                      円
+                    %li
+                  %p.tax
+                    (税込)
+            -# -if product.purchaser_id.present?  在庫切れ表示をする
+              .items-box_photo__sold
+                .items-box_photo__sold__inner
+                  sold
+      .productBox
+        .productHead
+          %a{ href: "#" }
+            %h3.topic
+              ベビー・キッズ
+            .productList
+              %a{ href: "#" }
+                %figure.productList--img
+                  = image_tag @last_babies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
+              .productList--body
+                %h3.name
+                  = @last_babies_item.name
+                .details
+                  %ul
+                    %li
+                      = @last_babies_item.price
+                    .en
+                    円
+                  %p.tax
+                    (税込)
+            -# -if product.purchaser_id.present?  在庫切れ表示をする
+              .items-box_photo__sold
+                .items-box_photo__sold__inner
+                  sold
+
+      .productBox
+        .productHead
+          %a{ href: "#" }
+            %h3.topic
+              家電・スマホ・カメラ
+            .productList
+              %a{ href: "#" }
+                %figure.productList--img
+                  = image_tag@last_appliances_item.images[0].image.url,size:"250x200" , alt:"商品写真"
+              .productList--body
+                %h3.name
+                  = @last_appliances_item.name
+                .details
+                  %ul
+                    %li
+                      = @last_appliances_item.price
+                    .en
+                    円
+                  %p.tax
+                    (税込)
+      -#       -# -if product.purchaser_id.present?  在庫切れ表示をする
+      -#         .items-box_photo__sold
+      -#           .items-box_photo__sold__inner
+      -#             sold
+
+
+
+
+
+
+

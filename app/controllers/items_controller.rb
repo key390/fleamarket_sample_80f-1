@@ -1,9 +1,23 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.includes(:images)
-
-    @items_index = @items.order(updated_at: :desc).limit(5)
-
+    @items_index = @items.order(updated_at: :desc).page(params[:page]).per(5)
+    @parents = Category.where(ancestry: nil)
+    @ladies = Category.find(1).subtree
+    @ladies_items = Item.where(category_id: @ladies)
+    @last_ladies_item = @ladies_items.last
+    @mens = Category.find(196).subtree
+    @mens_items = Item.where(category_id: @mens)
+    @last_mens_item = @mens_items.last
+    @babies = Category.find(327).subtree
+    @babies_items = Item.where(category_id: @babies)
+    @last_babies_item = @babies_items.last
+    @hobbies = Category.find(661).subtree
+    @hobbies_items = Item.where(category_id: @hobbies)
+    @last_hobbies_item = @hobbies_items.last
+    @appliances= Category.find(874).subtree
+    @appliances_items = Item.where(category_id: @appliances)
+    @last_appliances_item = @appliances_items.last
   end
 
   def new
@@ -30,10 +44,6 @@ class ItemsController < ApplicationController
       redirect_to new_item_path
     end  
   end  
-
-  
-
-
 
   private
   def item_params
