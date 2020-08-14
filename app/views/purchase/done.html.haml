@@ -1,3 +1,45 @@
+#__buybox
+  .buycontent
+    .buycontent__buytitle
+      .buycontent__buytitle__bicon
+        = link_to '/' do
+          = image_tag ("logo.png")
+    .buycontent__confirmation
+      .buycontent__confirmation__inputbox
+        %h2.buycontent__confirmation__inputbox__title 購入が完了しました！
+      .buycontent__confirmation__itembox
+        .buycontent__confirmation__itembox__itemicon
+          .buycontent__confirmation__itembox__itemicon__photo
+            = image_tag ("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png")
+          .buycontent__confirmation__itembox__itemicon__namebox
+            %p.buycontent__confirmation__itembox__itemicon__namebox__name なんでだろー
+            %p.buycontent__confirmation__itembox__itemicon__namebox__namecontent
+              %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__coin 送料込み (税込)
+              %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__price ¥30000000
+      .buycontent__confirmation__paymentbox
+        .buycontent__confirmation__paymentbox__payment
+          %span 支払い金額
+          %span.buycontent__confirmation__paymentbox__payment__pp ¥30000000
+      .buycontent__confirmation__completebox
+        .buycontent__confirmation__completebox__complete
+        .buycontent__confirmation__completebox__btn
+          %br
+          = form_tag(root_path, method: :get, id: 'charge-form',  name: "inputForm", class: 'buycontent__confirmation__completebox__complete__btn__b1') do
+            %button トップページに戻る
+  .footerbottom
+    .footerbottom__threebox
+      %ul.footerbottom__threebox__three
+        %li.footerbottom__threebox__three__displaybox
+          %a{href: '#' , class: 'footerbottom__threebox__three__displaybox__display'}プライバシーポリシー
+        %li.footerbottom__threebox__three__displaybox2
+          %a{href: '#' , class: 'footerbottom__threebox__three__displaybox2__display2'}FURIMA利用規約
+  .logobox
+    = link_to '/' do
+      = image_tag ("logo-white.png")
+  %p.logoc © FURIMA
+
+
+
 %h2 購入が完了しました！
 %p Apple MacBook Pro 13インチ
 %p ¥135,000(送料込み)

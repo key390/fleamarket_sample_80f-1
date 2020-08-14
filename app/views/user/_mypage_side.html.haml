@@ -12,8 +12,8 @@
       = link_to "#", class: "link_plofile" do
         本人情報
     %li.mypage-side-box__card
-      = link_to "#", class: "link_card" do
-        支払い方法
+      = link_to new_card_path, class: "link_card" do
+        支払い方法の編集
     %li.mypage-side-box__logout
       = link_to( destroy_user_session_path, method: :delete, class: "link_logout") do
         ログアウト

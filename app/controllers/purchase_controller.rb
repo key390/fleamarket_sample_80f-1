@@ -6,7 +6,8 @@ class PurchaseController < ApplicationController
     #Cardテーブルは前回記事で作成、テーブルからpayjpの顧客IDを検索
     if @card.blank?
       #登録された情報がない場合にカード登録画面に移動
-      redirect_to controller: "cards", action: "new"
+      # redirect_to controller: "cards", action: "new", notice: "お支払い用のクレジットカードを登録して下さい"
+      render "index.error"
     else
       Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
       #保管した顧客IDでpayjpから情報取得
@@ -27,8 +28,8 @@ class PurchaseController < ApplicationController
   end
 
   def done
-      @product_purchaser= Product.find(params[:id])
-      @product_purchaser.update( purchaser_id: current_user.id)
+      # @product_purchaser= Product.find(params[:id])
+      # @product_purchaser.update( purchaser_id: current_user.id)
   end
 
   def set_card
