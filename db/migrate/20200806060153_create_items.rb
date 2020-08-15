@@ -8,6 +8,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :area, null:false
       t.string :limit, null:false
       t.integer :price, null:false
+      t.integer :buyer_id
       t.timestamps
     end
   end
