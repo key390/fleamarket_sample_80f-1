@@ -3,7 +3,7 @@
   height: 100%;
 }
 
-.section{
+section{
   display: block;
 }
 
@@ -12,8 +12,6 @@
   font-size: 28px;
   line-height: 1.4;
   font-weight: bold;
-}
-h2{
   margin: 0;
   padding: 0;
   display: block;
@@ -26,21 +24,12 @@ h2{
   text-align: center;
 }
 
-a{
+.link{
   text-decoration: none;
 }
 
 .title{
   font-size: 24px;
-  color: #3CCACE;
-}
-
-a:-webkit-any-link {
-  color: -webkit-link;
-  cursor: pointer;
-}
-
-h3{
   font-weight: bold;
   font-size: 100%;
   margin: 0;
@@ -50,6 +39,12 @@ h3{
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  color: #3CCACE;
+}
+
+.link:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
 }
 
 .productLists{
@@ -66,30 +61,12 @@ h3{
   background-color: #fff;
 }
 
-.productList a{
   .section{
     display: block;
   }
     h2{
-      margin: 0;
-      padding: 0;
-      display: block;
-      margin-block-start: 0.83em;
-      margin-block-end: 0.83em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-    }
 
-    .head{
-      text-align: center;
-      font-size: 28px;
-      line-height: 1.4;
-      font-weight: bold;
     }
-
-        a{
-          text-decoration: none;
-        }
 
         .title{
           text-align: center;
@@ -133,11 +110,11 @@ h3{
         background-color: #fff;
       }
 
-      .productList a{
+      .productList.link{
         display: inline-block;
       }
 
-      .productLists a{
+      .productLists.link{
         text-decoration: none;
         position: relative;
       } 
@@ -178,7 +155,7 @@ h3{
         font-size: 16px;
       }
 
-      p {
+      .tax {
         font-size: 10px;
         text-align: left;
         display: block;
@@ -207,9 +184,18 @@ h3{
   .topic{
     text-align: center;
     font-size: 24px;
+    font-weight: bold;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     color: #3CCACE;
   }
-}
+
 
 .items-box_photo__sold{
   width: 0;

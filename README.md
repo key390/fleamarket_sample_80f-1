@@ -65,6 +65,7 @@
 |user_id|integer|null false,foreign_key true|
 |category_id|integer|null false, foreign_key true|
 |brand_id|integer|foreign_key true|
+|buyer_id|integer||
 
 ### Association
 - belongs_to :user

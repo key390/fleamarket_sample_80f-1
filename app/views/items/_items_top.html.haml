@@ -2,18 +2,18 @@
 %html{lang: "ja"}
   %head
     %meta{charset: "utf-8"}
-
+    
   %section.pickupContainer
     %h2.head
       新規投稿商品
     .productBox
       .productHead
-        = link_to "#" do
+        = link_to "#", class: "link" do
           %h3.title 新規投稿商品
       .productLists
         - @items_index.each do |item|
           .productList
-            = link_to "#" do
+            = link_to "#", class:"link"do
               %figure.productList--img
                 = image_tag item.images[0].image.url, size:"250x200" , alt:"商品写真"
             .productList--body
@@ -27,10 +27,10 @@
                     円
                 %p.tax
                   (税込)
-            -# -if item.purchaser_id.present?
-            -#   .items-box_photo__sold
-            -#     .items-box_photo__sold__inner
-            -#       SOLD
+            -if item.buyer_id.present?
+              .items-box_photo__sold
+                .items-box_photo__sold__inner
+                  SOLD
       .pagenation
         = paginate @items_index
 
@@ -40,7 +40,7 @@
     .productBoxes
       .productBox
         .productHead
-          = link_to "#" do
+          = link_to "#", class:"link" do
             %h3.topic
               レディース
             .productList
@@ -48,7 +48,7 @@
                 %h3
                   このカテゴリの新規投稿商品はありません。
               - else
-                = link_to "#" do
+                = link_to "#", class:"link" do
                   %figure.productList--img
                     = image_tag @last_ladies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
                 .productList--body
@@ -63,14 +63,14 @@
                       %li
                     %p.tax
                       (税込)
-                -# -if product.purchaser_id.present?
-                -#   .items-box_photo__sold
-                -#     .items-box_photo__sold__inner
-                -#       SOLD
+                -if product.buyer_id.present?
+                  .items-box_photo__sold
+                    .items-box_photo__sold__inner
+                      SOLD
 
       .productBox
         .productHead
-          = link_to "#" do
+          = link_to "#", class:"link" do
             %h3.topic
               メンズ
             .productList
@@ -78,7 +78,7 @@
                 %h3
                   このカテゴリの新規投稿商品はありません。
               - else
-                %a{ href: "#" }
+                = link_to "#", class:"link" do
                   %figure.productList--img
                     = image_tag @last_mens_item.images[0].image.url,size:"250x200" , alt:"商品写真"
                 .productList--body
@@ -93,13 +93,13 @@
                       %li
                     %p.tax
                       (税込)
-                -# -if product.purchaser_id.present?
-                -#   .items-box_photo__sold
-                -#     .items-box_photo__sold__inner
-                -#       SOLD
+                -if product.buyer_id.present?
+                  .items-box_photo__sold
+                    .items-box_photo__sold__inner
+                      SOLD
       .productBox
         .productHead
-          = link_to "#" do
+          = link_to "#", class:"link" do
             %h3.topic
               ベビー・キッズ
             .productList
@@ -107,7 +107,7 @@
                 %h3
                   このカテゴリの新規投稿商品はありません。
               - else
-                %a{ href: "#" }
+                = link_to "#", class:"link" do
                   %figure.productList--img
                     = image_tag @last_babies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
                 .productList--body
@@ -121,14 +121,14 @@
                       円
                     %p.tax
                       (税込)
-                -# -if product.purchaser_id.present?
-                -#   .items-box_photo__sold
-                -#     .items-box_photo__sold__inner
-                -#       SOLD
+                -if product.buyer_id.present?
+                  .items-box_photo__sold
+                    .items-box_photo__sold__inner
+                      SOLD
 
       .productBox
         .productHead
-          = link_to "#" do
+          = link_to "#", class:"link" do
             %h3.topic
               家電・スマホ・カメラ
             .productList
@@ -136,7 +136,7 @@
                 %h3
                   このカテゴリの新規投稿商品はありません。
               - else
-                = link_to "#" do
+                = link_to "#", class:"link" do
                   %figure.productList--img
                     = image_tag @last_appliances_item.images[0].image.url,size:"250x200" , alt:"商品写真"
                 .productList--body
@@ -150,10 +150,10 @@
                       円
                     %p.tax
                       (税込)
-                -# -if product.purchaser_id.present? 
-                -#   .items-box_photo__sold
-                -#     .items-box_photo__sold__inner
-                -#       SOLD
+                -if product.buyer_id.present? 
+                  .items-box_photo__sold
+                    .items-box_photo__sold__inner
+                      SOLD
 
 
 
