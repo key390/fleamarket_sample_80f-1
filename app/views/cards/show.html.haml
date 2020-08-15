@@ -10,3 +10,5 @@
   %button 削除する
 = form_tag(root_path, method: :get, id: 'charge-form',  name: "inputForm") do
   %button トップページに戻る
+= form_tag(user_path(current_user), method: :get, id: 'charge-form',  name: "inputForm") do
+  %button マイページに戻る
