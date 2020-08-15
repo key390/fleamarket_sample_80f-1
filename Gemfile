@@ -88,3 +88,4 @@ gem 'payjp'
 gem "jquery-rails"
 
 gem 'dotenv-rails'
+gem 'kaminari'
