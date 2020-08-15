@@ -37,6 +37,7 @@
   %section.pickupContainer
     %h2.head
       ピックアップカテゴリ
+
     .productBoxes
       .productBox
         .productHead
@@ -63,7 +64,7 @@
                       %li
                     %p.tax
                       (税込)
-                -if product.buyer_id.present?
+                -if @last_ladies_item.buyer_id.present?
                   .items-box_photo__sold
                     .items-box_photo__sold__inner
                       SOLD
@@ -83,7 +84,7 @@
                     = image_tag @last_mens_item.images[0].image.url,size:"250x200" , alt:"商品写真"
                 .productList--body
                   %h3.name
-                    =@last_mens_item.name
+                    = @last_mens_item.name
                   .details
                     %ul
                       %li
@@ -93,7 +94,7 @@
                       %li
                     %p.tax
                       (税込)
-                -if product.buyer_id.present?
+                -if @last_mens_item.buyer_id.present?
                   .items-box_photo__sold
                     .items-box_photo__sold__inner
                       SOLD
@@ -121,7 +122,7 @@
                       円
                     %p.tax
                       (税込)
-                -if product.buyer_id.present?
+                -if @last_babies_item.buyer_id.present?
                   .items-box_photo__sold
                     .items-box_photo__sold__inner
                       SOLD
@@ -150,7 +151,7 @@
                       円
                     %p.tax
                       (税込)
-                -if product.buyer_id.present? 
+                -if @last_appliance_item.buyer_id.present? 
                   .items-box_photo__sold
                     .items-box_photo__sold__inner
                       SOLD
