@@ -1,240 +1,165 @@
 .form{
-  height: 100vh;
-  padding:0 50px;
-  width: 1450px;
   background-color:#EEEEEE	;
-  
-  .contents{
-    width: 1300px;
-    display: flex;
-    
-  }
+  width:100vw;
+  padding:30px 50px;
+  font-size: 20px;
 }
-  .constraint{
-    display: flex;
-    
-  }
-
-  .images{
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-  }
-  
-  .imageindicate{
-    width:110px;
-  }
-  .imagemust{
-    color: red;
-    margin-left: 5px;
-    width: 100px;
-  }
-  .listing-form-box{
-    margin-top: 40px;
-  }
-  .hidden-content{
-  padding: 0 40px;
-  display: flex;
-  padding-top: 15px;
-  justify-content: space-around;
-  }
-
-
-.name{
-  margin-top: 30px;
-  margin-bottom: 16px;
-  padding-top: 15px;
-
-}
-    .item{
+    .contents{
+      width: 1300px;
+      text-align: left;
       display: flex;
-      justify-content: space-around;
-      padding: 0 80px;
-      .iteminfo{
+    }
+
+        .constraint{
+          display: flex;
+        }
+          .imageindicate{
+            margin-left: 83px;
+            margin-bottom: 20px;
+            width:110px;
+          }
+          .imagemust{
+            color: red;
+            margin-left: 45px;
+            width: 100px;
+          }
+//     ​
+        .hidden-content{
+          padding: 0 40px;
+          padding-top: 15px;
+          display: flex;
+          justify-content: space-around;
+        }
+  //         .images{
+  //           padding: 0 40px;
+  //           display: flex;
+  //           padding-top: 15px;
+  //           justify-content: space-around;
+  //         }
+  // ​
+  //         .image1{
+  //           height: 188.25px;
+  //           width: 188.25px;
+  //           border: 1px solid #ccc;
+  //           background-color:white;
+  //         }
+  //         .image2{
+  //           height: 188.25px;
+  //           width: 188.25px;
+  //           border: 1px solid #ccc;
+  //           background-color:white;
+  //         }
+  //         .image3{
+  //           height: 188.25px;
+  //           width: 188.25px;
+  //           border: 1px solid #ccc;
+  //           background-color:white;
+  //         }
+  //         .image4{
+  //           height: 188.25px;
+  //           width: 188.25px;
+  //           border: 1px solid #ccc;
+  //           background-color:white;
+  //         }
+//   ​
+  .name{
+    margin-top: 30px;
+    margin-bottom: 16px;
+    padding-top: 15px;
+  }
+
+      .item{
         display: flex;
-        &__name{
-          color:black;
-          width: 120px;
-
+        // justify-content: space-around;
+        padding: 0 80px;
+      
+          .iteminfo{
+            display: flex;
+            margin-top: 30px;
+          
+          &__name{
+            color:black;
+            width: 150px;
+          }
+          &__must{
+            color: red;
+            margin-left: 15px;
+            width: 150px;
+          }
         }
-        &__must{
-          color: red;
-          margin-left: 5px;
-          width: 100px;
+        .nameform{
+          width: 800px;
+          height: 50px;
+          background-color: white;
+          border: inset;
+          margin-top: 30px;
+        }
+        .explainform{
+          border: inset;
+          height: 200px;
+          width: 800px;
         }
       }
-      .nameform{
-        width: 400px;
-        background-color: white;
-      }
-    }
-.explain{
-  margin-bottom: 16px;
-  padding-top: 15px;
-}
-
-.explainform{
-  height: 150px;
-  width:400px
-}
-
-  
-  
-.listing-product-detail__category{
-  text-align: center;
-}
-.listing-default--require{
-  color: red;
-  margin-left: 5px;
-  width: 100px;
-
-}
-.brand{
-  margin-bottom: 16px;
-  margin-top: 25px;
-}
-
-.status{
-  margin-bottom: 16px;
-}
-
-.statuscontent{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 168px;
-  padding-right: 405px;
-  .statusinfo{
-    display: flex;
-    &__name{
-      color:black;
-      width: 120px;
-
-    }
-    &__must{
-      color: red;
-      margin-left: 5px;
-      width: 100px;
-    }
+  .listing-form-box{
+    height: 20px;
+    display: flex; 
   }
-  .statusform{
-    width: 400px;
-    background-color: white;
-  }
-}
+  .listing-select-wrapper{
+    
 
-.area{
-  margin-bottom: 16px;
-  
-}
-.areacontent{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 168px;
-  padding-right: 490px;
-  .areainfo{
-    display: flex;
-    &__name{
-      color:black;
-      width: 120px;
+  }
+  .explain{
+    margin-bottom: 16px;
+    padding-top: 15px;
+  }
 
-    }
-    &__must{
-      color: red;
-      margin-left: 5px;
-      width: 100px;
-    }
+  .listing-product-detail__category{
+    margin-left: 83px;
   }
-  .areaform{
-    width: 400px;
-    background-color: white;
+  .listing-default--require{
+    margin-left: 55px;
+    color: red;
   }
-}
-.limit{
-  margin-bottom: 16px;
-}
 
-.limitcontent{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 168px;
-  padding-right: 467px;
-  .limitinfo{
-    display: flex;
-    &__name{
-      color:black;
-      width: 120px;
+  .category{
+    margin-bottom: 16px;
+  }
+  ​
+  .brand{
+    margin-bottom: 16px;
+  }
+  ​
+  .status{
+    margin-bottom: 16px;
+  }
+  ​
+  .area{
+    margin-bottom: 16px;
+  }
+  ​
+  .limit{
+    margin-bottom: 16px;
+  }
+  .delivery_cost {
+    margin-bottom: 16px;
+  }
+  ​
+  .price1{
+    margin-bottom: 16px;
+  }
+  ​
+  ​
+  .new{
+    text-align: center;
+    margin-top: 50px;
+  }
+  .newbtn{
+    background-color: red;
+  }
 
-    }
-    &__must{
-      color: red;
-      margin-left: 5px;
-      width: 100px;
-    }
-  }
-  .limitform{
-    width: 400px;
-    background-color: white;
-  }
-}
-.delivery_cost {
-  margin-bottom: 16px;
-}
 
-.deliverycontent{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 168px;
-  padding-right: 412px;
-  .deliveryinfo{
-    display: flex;
-    &__name{
-      color:black;
-      width: 120px;
 
-    }
-    &__must{
-      color: red;
-      margin-left: 5px;
-      width: 100px;
-    }
-  }
-  .deliveryform{
-    width: 400px;
-    background-color: white;
-  }
-}
-.price{
-  margin-bottom: 16px;
-}
 
-.pricecontent{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 140px;
-  padding-right: 173px;
-  .priceinfo{
-    display: flex;
-    &__name{
-      color:black;
-      width: 120px;
 
-    }
-    &__must{
-      color: red;
-      margin-left: 5px;
-      width: 100px;
-    }
-  }
-  .priceform{
-    width: 400px;
-    background-color: white;
-  }
-}
-.new{
-  text-align: center;
-  margin-top: 30px;
-}
-.newbtn{
-  background-color: red;
-}
+
+
