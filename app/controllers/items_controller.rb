@@ -36,7 +36,6 @@ class ItemsController < ApplicationController
   end
   
   def show
-     
   end
 
   def create
@@ -46,7 +45,21 @@ class ItemsController < ApplicationController
     else 
       redirect_to new_item_path
     end  
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+    @category_parent_array = Category.where(ancestry: nil)
   end  
+
+  def update
+    item = Item.find(params[:id])
+    if item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to edit_item_path(item)
+    end
+  end
 
   private
   def item_params
