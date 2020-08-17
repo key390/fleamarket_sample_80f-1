@@ -6,57 +6,57 @@
     .content-box
       .image
         .image__name
-          ここに名前が入る
+          =@item.name
         .image__top
-          = image_tag 'pict-reason-03.jpg', class:'image__top__1',size:"500x300"
+          = image_tag @item.images[0].image.url, size:"500x300" 
+         
         .image__bottom
-          = image_tag 'pict-reason-02.jpg', class:'image__bottom__all',size:"200x200"
-          = image_tag 'pict-reason-02.jpg', class:'image__bottom__all',size:"200x200"
-          = image_tag 'pict-reason-02.jpg', class:'image__bottom__all',size:"200x200"
+          - @images[1..3].each do |image|
+            =image_tag("#{image.image}",class:'image__bottom__all' , size: '200x200')
       .price
         .price__integer
-          ￥100,000,000
+          =@item.price
         .price__index
           (税込み) 送料込 プライスレスです
       .text
         .text-form
-          がっかりしてめそめそしてどうしたんだい
-          太陽みたいに笑うきみはどこだい
-          やりたいこと やったもん勝ち青春なら
-          つらいときはいつだってそばにいるから
-          夢はでかくなけりゃつまらないだろう
-          胸をたたいて冒険しよう
-          そうさ100％勇気 もうがんばるしかないさ
-          この世界中の元気 抱きしめながら
-          そうさ100％勇気 もうやりきるしかないさ
-          ぼくたちが持てる輝き 永遠に忘れないでね
+          =@item.explain
 
       .index
         %table
           %tr
             %th 出品者
-            %td 私だ！
+            %td
+              =@item.user.nickname
           %tr
             %th カテゴリー
-            %td 私だ！
+            %td 
+              =link_to"#{@item.category.root.name}","#"
+              %br
+              =link_to"#{@item.category.parent.name}","#"
+              %br
+              =link_to"#{@item.category.name}","#"
+
           %tr
             %th ブランド
-            %td 私だ！
-          %tr
-            %th 商品のサイズ
-            %td 私だ！
+            %td 
+              =@item.brand   
           %tr
             %th 商品の状態
-            %td 私だ！
+            %td 
+              =@item.status.name
           %tr
             %th 配送料の負担
-            %td 私だ！
+            %td 
+              =@item.delivery_cost.name
           %tr
             %th 発送元の地域
-            %td 私だ！
+            %td 
+              =link_to "#{@item.area.name}","#"
           %tr
             %th 発送日の目安
-            %td 私だ！
+            %td 
+              =@item.limit.name
       .buy
         = link_to purchase_index_path do
           .buy-btn
