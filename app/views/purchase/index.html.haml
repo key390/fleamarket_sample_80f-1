@@ -10,22 +10,29 @@
       .buycontent__confirmation__itembox
         .buycontent__confirmation__itembox__itemicon
           .buycontent__confirmation__itembox__itemicon__photo
-            = image_tag ("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png")
+            = image_tag @item.images[0].image.url, size:"200x200" , alt:"商品写真"
           .buycontent__confirmation__itembox__itemicon__namebox
-            %p.buycontent__confirmation__itembox__itemicon__namebox__name なんでだろー
+            %p.buycontent__confirmation__itembox__itemicon__namebox__name
+            =@item.name
             %p.buycontent__confirmation__itembox__itemicon__namebox__namecontent
               %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__coin 送料込み (税込)
-              %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__price ¥30000000
+              %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__price
+              ="￥" + @item.price.to_s
       .buycontent__confirmation__paymentbox
         .buycontent__confirmation__paymentbox__payment
           %span 支払い金額
-          %span.buycontent__confirmation__paymentbox__payment__pp ¥30000000
+          %span.buycontent__confirmation__paymentbox__payment__pp
+            ="￥" + @item.price.to_s
       .buycontent__confirmation__deliverybox
         .buycontent__confirmation__deliverybox__delivery
           %h3.buycontent__confirmation__deliverybox__delivery__shippingaddress 配送先
         %a.buycontent__confirmation__deliverybox__registerbox2
-          = link_to '#' do
-            %span.buycontent__confirmation__deliverybox__registerbox2__font2 登録してください
+          %span.buycontent__confirmation__deliverybox__registerbox2__font2
+          = "〒" + current_user.address.post.to_s
+          = current_user.address.prefectures.to_s
+          = current_user.address.city.to_s
+          = current_user.address.number.to_s
+          = current_user.address.building.to_s
       .buycontent__confirmation__completebox
         .buycontent__confirmation__completebox__complete
         .buycontent__confirmation__completebox__btn
