@@ -42,7 +42,10 @@ class ItemsController < ApplicationController
       @category_grandchildren = Category.find("#{params[:child_id]}").children
   end
   
-  
+
+  def show
+    @item = Item.find(params[:id])
+  end
 
   def create
     @item = Item.new(item_params)
@@ -52,6 +55,11 @@ class ItemsController < ApplicationController
       redirect_to new_item_path
     end  
   end  
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
+    redirect_to root_path
+  end
 
   private
   def item_params

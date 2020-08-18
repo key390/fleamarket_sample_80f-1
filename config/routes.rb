@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :user, only: [:show]
 
-  resources :items, only: [:index,:new,:create,:show] do
+  resources :items, only: [:index,:new,:create,:show, :destroy] do
     collection do
       get 'get_category_children', defaults: { format: 'json' }
       get 'get_category_grandchildren', defaults: { format: 'json' }
