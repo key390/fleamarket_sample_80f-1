@@ -62,10 +62,10 @@
           .buy-btn
             購入する！
       .delete
-        /- if user_signed_in? && current_user.id == @item.user_id
-        = link_to item_path(@item.id), method: :delete do
-          .delete-btn
-            削除する！！
+        - if user_signed_in? && current_user.id == @item.user_id
+          = link_to item_path(@item.id), method: :delete do
+            .delete-btn
+              削除する！！
       .option
         %ul.option-btns
           %li.option-like
