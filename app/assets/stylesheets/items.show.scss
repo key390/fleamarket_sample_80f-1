@@ -145,6 +145,7 @@
 }
 .comment-form{
   margin-top: 20px;
+}
   .comment-form__text{
     min-height: 100px;
     min-width: 550px;
@@ -158,6 +159,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+  }
     .comment-form__send{
       width: 60%;
       line-height: 48px;
@@ -173,8 +175,8 @@
       left: 150px;
       top: 17px;
     }
-  }
-}
+  
+
 .next-link{
   margin-top: 10px;
   display: flex;

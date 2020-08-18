@@ -6,4 +6,5 @@ class User < ApplicationRecord
   validates :nickname, :firstname, :lastname, :first_hurigana, :last_hurigana, :birthday ,presence: true
   has_one :address
   has_many :cards
+  has_many :items
 end

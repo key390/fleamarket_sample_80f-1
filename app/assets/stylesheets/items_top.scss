@@ -1,10 +1,11 @@
-.pickupContainer{
-  background-color: #f8f8f8;
-  height: 100%;
-}
-
 section{
   display: block;
+
+
+  .pickupContainer{
+    background-color: #f8f8f8;
+    height: 100%;
+  }
 }
 
 .head{
@@ -72,13 +73,13 @@ section{
           text-align: center;
           font-size: 24px;
           color: #3CCACE;
-        }
-
+        
+        
         a:-webkit-any-link {
           color: -webkit-link;
           cursor: pointer;
         }
-
+      }
         h3{
           font-weight: bold;
           font-size: 100%;
@@ -90,7 +91,7 @@ section{
           margin-inline-start: 0px;
           margin-inline-end: 0px;
         }
-
+      
         .name{
           font-size: 20px;
         }
@@ -118,29 +119,29 @@ section{
         text-decoration: none;
         position: relative;
       } 
-
-      .productList--img {
-        width: 250px;
-        height: 150px;
-        position: relative;
-        overflow: hidden;
-        margin: 0;
-        z-index: auto;
-      }
-
       figure {
         display: block;
         margin-block-start: 1em;
         margin-block-end: 1em;
         margin-inline-start: 40px;
         margin-inline-end: 40px;
+      
+        .productList--img {
+          width: 250px;
+          height: 150px;
+          position: relative;
+          overflow: hidden;
+          margin: 0;
+          z-index: auto;
+        }
       }
 
-
+      .details{
+        font-size: 16px;
+      
       ul{
         display: flex;
         list-style: none;
-      }
 
       i{
         padding-left: 30px;
@@ -149,10 +150,6 @@ section{
       li{
         display: list-item;
         text-align: -webkit-match-parent;
-      }
-
-      .details{
-        font-size: 16px;
       }
 
       .tax {
@@ -164,7 +161,8 @@ section{
         margin-inline-start: 0px;
         margin-inline-end: 0px;
       }
-
+    }
+  }    
       .fa-star:before {
         content: "\f005";
       }

@@ -1,7 +1,7 @@
 %body
   .wrapper
     = render "top-contents"
-  .photo
+  %section.photo
     .photo__main
       .photo__main__life
         %h2.photo__main__life__titlesub
@@ -16,11 +16,11 @@
           .photo__main__life__btn__bt2
             = link_to '#' do
               = image_tag ("http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg")
-  .topelected
+  %section.topelected
     %h2.topelected__subu
       FURIMAが選ばれる3つの理由
       %after
-    %ul.topelected_three
+    %ul.topelected__three
       %li.topelected__three__lk1
         .topelected__three__lk1__gt
           %span.topelected__three__lk1__gt__na 1
@@ -48,7 +48,7 @@
           %span 業界最安
         %p.topelected__three__lk3__rt4
           最大3%でお得に出品&購入！
-  .photo2
+  %section.photo2
     .photo2__inbox
       %h2.photo2__inbox__one 会員数日本一位
       %p.photo2__inbox__two
@@ -62,7 +62,7 @@
         .photo2__inbox__btbt__t2
           = link_to '#' do
             = image_tag ("http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg")
-  .topfeature
+  %section.topfeature
     %h2.topfeature__headname
       FURIMAの特徴
       %after
