@@ -61,8 +61,8 @@
         = link_to purchase_index_path do
           .buy-btn
             購入する！
-      .delete
-        - if user_signed_in? && current_user.id == @item.user_id
+      - if user_signed_in? && current_user.id == @item.user_id
+        .delete
           = link_to item_path(@item.id), method: :delete do
             .delete-btn
               削除する！！
