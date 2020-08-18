@@ -249,3 +249,24 @@
 .delete a {
     text-decoration: none;
 }
+
+.edit{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  border: solid 3px #000000;
+  width: 130px;
+}
+.edit-btn{
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}
+.edit a {
+    text-decoration: none;
+}
+
+.edit-delete {
+  display: flex;
+  justify-content: space-between;
+}

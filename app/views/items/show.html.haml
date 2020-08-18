@@ -57,15 +57,22 @@
             %th 発送日の目安
             %td 
               =@item.limit.name
-      .buy
-        = link_to item_purchase_index_path(@item) do
-          .buy-btn
-            購入する！
-      - if user_signed_in? && current_user.id == @item.user_id
-        .delete
-          = link_to item_path(@item.id), method: :delete do
-            .delete-btn
-              削除する！！
+      .edit-delete
+        - if user_signed_in? && current_user.id == @item.user_id
+          .delete
+            = link_to item_path(@item.id), method: :delete do
+              .delete-btn
+                削除する！
+          .edit
+            = link_to "#" do
+              .edit-btn
+                編集する！
+        - else
+          - if user_signed_in?
+            .buy
+              = link_to item_purchase_index_path(@item) do
+                .buy-btn
+                  購入する！
       .option
         %ul.option-btns
           %li.option-like
