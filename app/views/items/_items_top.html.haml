@@ -25,7 +25,8 @@
                     円
                 %p.tax
                   (税込)
-            -if item.buyer_id.present?
+            -if item.buyer_id == nil
+            -else
               .items-box_photo__sold
                 .items-box_photo__sold__inner
                   SOLD
