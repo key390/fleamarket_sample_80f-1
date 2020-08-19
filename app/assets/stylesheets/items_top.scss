@@ -60,6 +60,10 @@ section{
   display: inline-block; 
   float: left;
   background-color: #fff;
+  img{
+    height: 100%;
+    width: 100%;
+  }
 }
 
   .section{
@@ -142,16 +146,16 @@ section{
       ul{
         display: flex;
         list-style: none;
-
-      i{
-        padding-left: 30px;
       }
 
       li{
         display: list-item;
         text-align: -webkit-match-parent;
       }
-
+    }
+    i{
+      padding-left: 30px;
+    }
       .tax {
         font-size: 10px;
         text-align: left;
@@ -161,8 +165,7 @@ section{
         margin-inline-start: 0px;
         margin-inline-end: 0px;
       }
-    }
-  }    
+    
       .fa-star:before {
         content: "\f005";
       }
