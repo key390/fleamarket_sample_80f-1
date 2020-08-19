@@ -20,9 +20,7 @@
               .details
                 %ul
                   %li
-                    = item.price
-                  .en
-                    円
+                    ="#{item.price}円"
                 %p.tax
                   (税込)
             -if item.buyer_id == 0
@@ -47,7 +45,7 @@
               %h3
                 このカテゴリの新規投稿商品はありません。
             - else
-              = link_to item_path(@items), class:"link" do
+              = link_to "#", class:"link" do
                 %figure.productList--img
                   = image_tag @last_ladies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
               .productList--body
@@ -56,9 +54,7 @@
                 .details
                   %ul
                     %li
-                      = @last_ladies_item.price
-                    .en
-                    円
+                      ="#{@last_ladies_item.price}円"
                     %li
                   %p.tax
                     (税込)
