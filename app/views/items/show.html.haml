@@ -15,9 +15,9 @@
             =image_tag("#{image.image}",class:'image__bottom__all' , size: '200x200')
       .price
         .price__integer
-          =@item.price
+          ="#{@item.price}円"
         .price__index
-          (税込み) 送料込 プライスレスです
+          (税込み) 送料込 
       .text
         .text-form
           =@item.explain
