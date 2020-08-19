@@ -2,6 +2,9 @@
   .wrapper
     = render "top-contents"
 .form
+  %figure.productList--img
+    - @item.each do |i|
+      = image_tag i.images[0].image.url, size:"250x200" , alt:"商品写真"
   .contents
     = form_with model:@item, local:true do |f|
       .images
@@ -11,11 +14,13 @@
           .imagemust 
             必須
         .hidden-content
-          = f.fields_for :images do |i|
-            = i.file_field :image, class: "hidden-field"
-            %input{class:"hidden-field", type: "file", name: "item[images_attributes][1][image]", id: "item_images_attributes_1_image" }
-            %input{class:"hidden-field", type: "file", name: "item[images_attributes][2][image]", id: "item_images_attributes_2_image" }
-            %input{class:"hidden-field", type: "file", name: "item[images_attributes][3][image]", id: "item_images_attributes_3_image" }
+          #image-box
+            = f.fields_for :images do |image|
+              .js-file_group{"data-index" => "#{image.index}"}
+                = image.file_field :image, class: 'js-file'
+                %br/
+                %span.js-remove 削除
+
       .listing-form-box
         .listing-product-detail__category
           = f.label 'カテゴリー', class: 'listing-default__label'
@@ -42,16 +47,6 @@
             .iteminfo__must
               ※必須
           = f.text_area :explain, placeholder:"詳細記載",class: "explainform" 
-      -# .listing-form-box
-      -#   .listing-product-detail__category
-      -#     = f.label 'カテゴリー', class: 'listing-default__label'
-      -#     %span.listing-default--require ※必須
-
-          -# .listing-select-wrapper
-          -#   .listing-select-wrapper__box
-          -#     = f.collection_select :category_id, @category_parent_array, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
-          -#     %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
-             
       .brand
         .item
           .iteminfo
@@ -103,4 +98,3 @@
 
       .new
         = f.submit "出品する",class: "newbtn"            
-      

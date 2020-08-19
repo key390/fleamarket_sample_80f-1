@@ -30,7 +30,6 @@ class ItemsController < ApplicationController
     @category_children = Category.find_by(id: params[:parent_name], ancestry: nil).children
   end
 
-
   def get_category_grandchildren
       @category_grandchildren = Category.find("#{params[:child_id]}").children
   end
@@ -43,7 +42,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to root_path 
     else 
-      redirect_to new_item_path
+      redirect_to :new
     end  
   end
 
@@ -63,6 +62,6 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name,:explain,:status_id,:delivery_cost_id,:area_id,:brand,:limit_id,:price,:category_id,images_attributes: [:image, :_destroy, :id])
+    params.require(:item).permit(:name,:explain,:status_id,:delivery_cost_id,:area_id,:brand,:limit_id,:price,:category_id,:buyer_id,images_attributes:[:image, :_destroy, :id])
   end
 end
