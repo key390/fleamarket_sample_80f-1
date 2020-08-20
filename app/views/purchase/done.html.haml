@@ -12,8 +12,8 @@
           .buycontent__confirmation__itembox__itemicon__photo
             = image_tag @item.images[0].image.url, size:"200x200" , alt:"商品写真"
           .buycontent__confirmation__itembox__itemicon__namebox
-            %p.buycontent__confirmation__itembox__itemicon__namebox__name
-            =@item.name
+            .buycontent__confirmation__itembox__itemicon__namebox__name
+              =@item.name
             %p.buycontent__confirmation__itembox__itemicon__namebox__namecontent
               %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__coin 送料込み (税込)
               %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__price
