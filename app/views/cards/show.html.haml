@@ -1,14 +1,37 @@
-%label 登録クレジットカード情報
-%br
-= "**** **** **** " + @default_card_information.last4
-%br
-- exp_month = @default_card_information.exp_month.to_s
-- exp_year = @default_card_information.exp_year.to_s.slice(2,3)
-= exp_month + " / " + exp_year
-= form_tag(delete_cards_path, method: :post, id: 'charge-form',  name: "inputForm") do
-  %input{ type: "hidden", name: "card_id", value: "" }
-  %button 削除する
-= form_tag(root_path, method: :get, id: 'charge-form',  name: "inputForm") do
-  %button トップページに戻る
-= form_tag(user_path(current_user), method: :get, id: 'charge-form',  name: "inputForm") do
-  %button マイページに戻る
+.wrapper
+  = render "items/top-contents"
+.card-main
+  .card-main__contents
+    = form_tag(pay_cards_path, method: :post, id: 'charge-form', name: "inputForm") do
+      .card-main__contents__index
+        %label 登録済クレジットカード情報
+      .card-main__contents__index__number
+        .number-title
+          カード番号
+        .number-last4
+          = "**** **** **** " + @default_card_information.last4
+      .card-main__contents__index__limit
+        .limit-title
+          カード期限
+        .limit-index
+          - exp_month = @default_card_information.exp_month.to_s
+          - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+          = exp_month + " / " + exp_year
+      
+      .card-main__contents__link
+        .card-main__contents__link__top
+          = form_tag(root_path, method: :get, id: 'charge-form',  name: "inputForm") do
+            %button トップページに戻る
+        .card-main__contents__link__my-page
+          = form_tag(user_path(current_user), method: :get, id: 'charge-form',  name: "inputForm") do
+            %button マイページに戻る
+        .card-main__contents__link__delete
+          = form_tag(delete_cards_path, method: :post, id: 'charge-form',  name: "inputForm") do
+            %input{ type: "hidden", name: "card_id", value: "" }
+            %button このカード情報を削除する
+.wrapper
+  = render "items/bottom-contents"
+
+
+
+
