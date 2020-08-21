@@ -1,11 +1,67 @@
 .profile {
   height: 100vh;
-  width: 100vw;
-  text-align: center;
-  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
 }
 .profile-user {
-  font-size: 20px;
+  font-size: 30px;
   &__nickname {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+  &__lastname {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+  &__firstname {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+  &__mail {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+  &__birthday {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+}
+.profile-address {
+  font-size: 30px;
+  &__post {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+  &__prefecture {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+  &__city {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+  &__number {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+  &__building {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
+  }
+  &__phone {
+    border: 2px solid #000;
+    padding: 5px;
+    font-size: 18px;
   }
 }

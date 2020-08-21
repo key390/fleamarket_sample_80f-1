@@ -6,12 +6,12 @@
     .profile-user__nickname
       ニックネーム
       = current_user.nickname
-    .profile-user__firstname
-      苗字
-      = current_user.firstname
     .profile-user__lastname
-      お名前
+      名字
       = current_user.lastname
+    .profile-user__firstname
+      お名前
+      = current_user.firstname
     .profile-user__mail
       メールアドレス
       = current_user.email
@@ -32,6 +32,9 @@
     .profile-address__number
       番地
       = current_user.address.number.to_s
+    .profile-address__building
+      マンション名・ビル名
+      = current_user.address.building.to_s
     .profile-address__phone
       電話番号
       = current_user.address.phone.to_s
