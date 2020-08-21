@@ -10,27 +10,25 @@
       .productHead
         - @items_index.each do |item|
           .productLists
-            = link_to edit_item_path(item), method: :get do
-              編集
-              .productList
-                = link_to item_path(item), class:"link"do
-                  %figure.productList--img
-                    = image_tag item.images[0].image.url, size:"250x200" , alt:"商品写真"
-                .productList--body
-                  %h3.name
-                    = item.name
-                  .details
-                    %ul
-                      %li.en
-                        = "#{item.price}円"
-                    %p.tax
-                      (税込)
-                -if item.buyer_id.present?
-                  .items-box_photo__sold
-                    .items-box_photo__sold__inner
-                      SOLD
-      .pagenation
-        = paginate @items_index
+            .productList
+              = link_to item_path(item), class:"link"do
+                %figure.productList--img
+                  = image_tag item.images[0].image.url, size:"250x200" , alt:"商品写真"
+              .productList--body
+                %h3.name
+                  = item.name
+                .details
+                  %ul
+                    %li.en
+                      = "#{item.price}円"
+                  %p.tax
+                    (税込)
+              -if item.buyer_id.present?
+                .items-box_photo__sold
+                  .items-box_photo__sold__inner
+                    SOLD
+    .pagenation
+      = paginate @items_index
 
   %section.pickupContainer
     %h2.head
