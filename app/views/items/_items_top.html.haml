@@ -21,10 +21,8 @@
                     = item.name
                   .details
                     %ul
-                      %li
-                        = item.price
-                      .en
-                        円
+                      %li.en
+                        = "#{item.price}円"
                     %p.tax
                       (税込)
                 -if item.buyer_id.present?
@@ -56,10 +54,8 @@
                   = @last_ladies_item.name
                 .details
                   %ul
-                    %li
-                      = @last_ladies_item.price
-                    .en
-                    円
+                    %li.en
+                      = "#{@last_ladies_item.price}円"
                     %li
                   %p.tax
                     (税込)
@@ -85,10 +81,8 @@
                   = @last_mens_item.name
                 .details
                   %ul
-                    %li
-                      = @last_mens_item.price
-                    .en
-                      円
+                    %li.en
+                      = "#{@last_mens_item.price}円"
                     %li
                   %p.tax
                     (税込)
@@ -113,10 +107,8 @@
                   = @last_babies_item.name
                 .details
                   %ul
-                    %li
-                      = @last_babies_item.price
-                    .en
-                    円
+                    %li.en
+                      = "#{@last_babies_item.price}円"
                   %p.tax
                     (税込)
               -if @last_babies_item.buyer_id.present?
@@ -141,10 +133,8 @@
                   = @last_appliances_item.name
                 .details
                   %ul
-                    %li
-                      = @last_appliances_item.price
-                    .en
-                    円
+                    %li.en
+                      = "#{@last_appliances_item.price}円"
                   %p.tax
                     (税込)
               -if @last_appliances_item.buyer_id.present? 

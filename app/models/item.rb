@@ -9,7 +9,7 @@ class Item < ApplicationRecord
   has_many :images
   accepts_nested_attributes_for :images, allow_destroy: true
 
-  validates :images, presence: true, length: {maximum: 1, maximum: 4}
+  validates :images, presence: true, length: {minimum: 1, maximum: 4}
   validates :name, presence: true
   validates :explain, presence: true
   validates :category_id, presence: true

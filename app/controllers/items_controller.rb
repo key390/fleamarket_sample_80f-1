@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.includes(:images)
+    @items = Item.includes(:images).order('created_at DESC')
+ 
     @items_index = @items.order(updated_at: :desc).page(params[:page]).per(5)
     @parents = Category.where(ancestry: nil)
     @ladies = Category.find(1).subtree
