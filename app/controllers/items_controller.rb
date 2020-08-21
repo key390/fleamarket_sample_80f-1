@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @parents = Category.where(ancestry: nil)
     @images = @item.images
- end
+  end
 
   def get_category_children
     @category_children = Category.find_by(id: params[:parent_name], ancestry: nil).children
