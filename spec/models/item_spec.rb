@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 describe Item do
   describe '#create' do
     it "全て揃っている時保存できる" do

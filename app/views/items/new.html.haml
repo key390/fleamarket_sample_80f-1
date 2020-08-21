@@ -107,7 +107,8 @@
 %body.edit
   .wrapper
     = render "top-contents"
-  .edit_form
+.form1
+  .contents
     = form_with model:@item, local:true do |f|
       .edit_constraint
         .edit_imageindicate
@@ -139,15 +140,17 @@
       .edit_listing-form-box
         .listing-product-detail__category
           = f.label 'カテゴリー', class: 'listing-default__label'
-          %span.edit_listing-default--require ※必須
-          .edit_listing-select-wrapper
-            .edit_listing-select-wrapper__box
+          %span.listing-default--require ※必須
+          
+          .listing-select-wrapper
+            .listing-select-wrapper__box
               = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
-              
-      .edit_name
-        .edit_item
-          .edit_iteminfo
-            .edit_iteminfo__name
+              %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
+                   
+      .name1
+        .item
+          .iteminfo
+            .iteminfo__name
               商品名
             .edit_iteminfo__must
               ※必須
@@ -159,11 +162,11 @@
               説明
             .edit_iteminfo__must
               ※必須
-          = f.text_area :explain, placeholder:"詳細記載",class: "edit_explainform" 
-      .edit_brand
-        .edit_item
-          .edit_iteminfo
-            .edit_iteminfo__name
+          = f.text_area :explain, placeholder:"詳細記載",class: "explainform"             
+      .brand
+        .item
+          .iteminfo
+            .iteminfo__name
               ブランド
             .edit_iteminfo__any
               ※任意

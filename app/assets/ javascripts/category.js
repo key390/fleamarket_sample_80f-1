@@ -1,13 +1,14 @@
 $(function(){
   function appendOption(category){
-    var html = `<option value="${category.name}" data-category="${category.id}">${category.name}</option>`;
+    var html = `<option value="${category.id}" data-category="${category.id}">${category.name}</option>`;
+
     return html;
   }
   function appendChidrenBox(insertHTML){
     var childSelectHtml = '';
     childSelectHtml = `<div class='listing-select-wrapper__added' id= 'children_wrapper'>
                         <div class='listing-select-wrapper__box'>
-                          <select class="listing-select-wrapper__box--select" id="child_category" name="category_id">
+                          <select class="listing-select-wrapper__box--select" id="child_category" name="item[category_id]">
                             <option value="---" data-category="---">---</option>
                             ${insertHTML}
                           <select>
@@ -20,7 +21,8 @@ $(function(){
     var grandchildSelectHtml = '';
     grandchildSelectHtml = `<div class='listing-select-wrapper__added' id= 'grandchildren_wrapper'>
                              <div class='listing-select-wrapper__box'>
-                                <select class="listing-select-wrapper__box--select" id="grandchild_category" name="category_id">
+                                <select class="listing-select-wrapper__box--select" id="grandchild_category" name="item[category_id]">
+
                                   <option value="---" data-category="---">---</option>
                                   ${insertHTML}
                                 </select>

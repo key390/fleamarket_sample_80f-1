@@ -21,6 +21,9 @@
   &__input {
     margin: 0 auto;
     max-width: 320px;
+    .actions a {
+      text-decoration: none;
+    }
   }
 
   &__label {

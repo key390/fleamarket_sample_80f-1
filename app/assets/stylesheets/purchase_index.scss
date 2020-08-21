@@ -50,21 +50,23 @@ body{
     
         &__itemicon{
           display: flex;
-         -webkit-box-pack: justify;
-         justify-content: space-between;
-         &__photo{
-          height: 100px;
+          -webkit-box-pack: justify;
+          justify-content: space-between;
+          padding-bottom: 10px;
+          &__photo{
+          height: 120px;
           width: 100px;
           margin: 0 60px;
+        
           img{
             height: 100%;
           }
-         }
-         &__namebox{
+          }
+          &__namebox{
           width: 100%;
           margin-left: 16px;
           &__name{
-            font-size: 20px;
+            font-size: 30px;
             line-height: 1.4em;
             margin-bottom: 8px;
             text-align: center;

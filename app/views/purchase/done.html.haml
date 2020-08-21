@@ -10,16 +10,19 @@
       .buycontent__confirmation__itembox
         .buycontent__confirmation__itembox__itemicon
           .buycontent__confirmation__itembox__itemicon__photo
-            = image_tag ("https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png")
+            = image_tag @item.images[0].image.url, size:"200x200" , alt:"商品写真"
           .buycontent__confirmation__itembox__itemicon__namebox
-            %p.buycontent__confirmation__itembox__itemicon__namebox__name なんでだろー
+            .buycontent__confirmation__itembox__itemicon__namebox__name
+              =@item.name
             %p.buycontent__confirmation__itembox__itemicon__namebox__namecontent
               %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__coin 送料込み (税込)
-              %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__price ¥30000000
+              %span.buycontent__confirmation__itembox__itemicon__namebox__namecontent__price
+              ="￥" + @item.price.to_s
       .buycontent__confirmation__paymentbox
         .buycontent__confirmation__paymentbox__payment
           %span 支払い金額
-          %span.buycontent__confirmation__paymentbox__payment__pp ¥30000000
+          %span.buycontent__confirmation__paymentbox__payment__pp
+          ="￥" + @item.price.to_s
       .buycontent__confirmation__completebox
         .buycontent__confirmation__completebox__complete
         .buycontent__confirmation__completebox__btn
@@ -40,8 +43,8 @@
 
 
 
-%h2 購入が完了しました！
-%p Apple MacBook Pro 13インチ
-%p ¥135,000(送料込み)
-= form_tag(root_path, method: :get, id: 'charge-form',  name: "inputForm") do
-  %button トップページに戻る
+-# %h2 購入が完了しました！
+-# %p Apple MacBook Pro 13インチ
+-# %p ¥135,000(送料込み)
+-# = form_tag(root_path, method: :get, id: 'charge-form',  name: "inputForm") do
+-#   %button トップページに戻る

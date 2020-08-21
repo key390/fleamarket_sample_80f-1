@@ -1,0 +1,86 @@
+.card-main{
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  .card-main__contents{
+    width: 700px;
+    border: 2px solid #00ffff;
+    padding: 60px 60px;
+  }
+}
+
+.card-main__contents__number{
+  padding: 30px 0 10px 0;
+  label{
+    margin: 0 30px 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  span{
+    background-color: red;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+}
+.card__logo{
+  display: flex;
+  padding-left: 150px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EEEEEE;
+
+}
+
+.card-main__contents__limit{
+  padding: 30px 0;
+  border-bottom: 1px solid #EEEEEE;
+  label{
+    margin: 0 45px 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  span{
+    background-color: red;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+}
+
+.card-main__contents__pass{
+  padding: 30px 0;
+  border-bottom: 1px solid #EEEEEE;
+  label{
+    margin: 0 30px 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  span{
+    background-color: red;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  #cvc{
+    width: 200px;
+  }
+}
+
+.card-main__contents__btn{
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  #token_submit{
+    width: 200px;
+    font-size: 20px;
+    background-color: #00ffff;
+    border: 1px solid #EEEEEE;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+}

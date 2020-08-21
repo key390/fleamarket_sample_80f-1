@@ -10,9 +10,12 @@
 @import "modules/user";
 @import "modules/mypage_side.scss";
 @import "modules/mypage_main.scss";
+@import "modules/flash";
 
 @import "items.show";
 @import "items_top";
 
+@import "card.show";
+@import "card.new";
 @import "purchase_index";
 @import "purchase_done";
