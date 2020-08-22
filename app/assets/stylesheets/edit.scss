@@ -1,5 +1,6 @@
 .edit{
   width: 100vw;
+
 }
 .edit_form  { 
   margin: 0 auto;
@@ -19,19 +20,18 @@
   .edit_hidden-content{
     padding: 0 40px;
     padding-top: 15px;
-  }
-  .edit-image{
-    margin-right: 43px;
-    margin-left: 43px;
+    display: flex;
+    justify-content: space-around;
   }
 
   #image-box{
     height: 300px;
-    margin-right:360px;
+    justify-content: start;
   }
   #previews{
+    
     position: absolute;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
   .edit_block{
     position: relative;
@@ -40,75 +40,30 @@
    .js-file_group{
      margin-top: 220px;
   }
-  .js-file{
-    width: 230px;
-    margin-right: 60px;
-    margin-left: 60px;
-   
-  }
-
 .js-remove{
   font-size: 25px;
   color: red;
 }
-
 .edit_listing-form-box{
-  margin-top: 50px;
-  margin-bottom: 60px;
-  margin-left: 0;
+  margin-top: 30px;
+  margin-bottom: 50px;
   font-size: 30px;
+  
 }
-.listing-product-detail__category{
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-
-}
-.listing-default__label{
-  font-size: 30px;
-}
-.edit_listing-select-wrapper{
-  margin-left: 150px;
-  margin-right: 150px;
-}
-
 .edit_listing-select-wrapper__box{
-  width: 10px;
-  height: 50px;
-  margin-top: 10px;
-  margin-left: 60px;
-  font-size: 25px;
-}
-
-#children_wrapper{
-  margin-top: 100px;
-
-}
-#grandchildren_wrapper{
-  padding-top: 160px;
-}
-
-
-
-.listing-select-wrapper__added{
-  width: 10px;
-  margin-top:30px;
+  margin-top: 5px;
   margin-left: 20px;
   font-size: 25px;
 }
-.listing-select-wrapper__box--arrow-down::before{
-  display: none;
-}
 
-.edit_listing-default--require{
-  margin-left: 50px;
-  color: red;
-}
+// .edit_listing-default--require{
+//   margin-left: 50px;
+//   color: red;
+// }
 
         .edit_item{
-          text-align: center;
           font-size: 30px;
-          margin-top: 20px;
+          margin-top: 30px;
           margin-bottom: 16px;
           padding-top: 15px;
         }
@@ -128,6 +83,7 @@
               border: inset;
               margin-top: 30px;
             }
+//       .edit_explain
           .edit_explainform{
             border: inset;
             height: 500px;
@@ -213,7 +169,6 @@
       
       .edit_newbtn,
       button.edit_newbtn {
-        margin-top: 50px;
         font-size: 1.6rem;
         font-weight: 700;
         line-height: 1.5;

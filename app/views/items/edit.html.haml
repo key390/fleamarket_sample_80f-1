@@ -31,12 +31,13 @@
             .js-remove 削除
 
       .edit_listing-form-box
-        .listing-product-detail__category
+        .edit_listing-product-detail__category
           = f.label 'カテゴリー', class: 'listing-default__label'
           %span.edit_listing-default--require ※必須
           .edit_listing-select-wrapper
             .edit_listing-select-wrapper__box
               = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+              %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
               
       .edit_name
         .edit_item
