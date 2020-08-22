@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :user, only: [:show]
 
   resources :items, only: [:index,:new,:create,:show, :edit, :update, :destpoy] do
+    resources :comments, only: [:create, :destroy] 
+
     collection do
       get 'get_category_children', defaults: { format: 'json' }
       get 'get_category_grandchildren', defaults: { format: 'json' }
@@ -23,6 +25,7 @@ Rails.application.routes.draw do
         get 'done', to: 'purchase#done'
       end
     end 
+
   end
   
   resources :cards, only: [:new,:show,] do
