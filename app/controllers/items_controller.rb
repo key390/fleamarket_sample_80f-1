@@ -18,6 +18,8 @@ class ItemsController < ApplicationController
     @appliances= Category.find(874).subtree
     @appliances_items = Item.where(category_id: @appliances)
     @last_appliances_item = @appliances_items.last
+    @items = current_user.items 
+    @item = current_user.items.new 
   end
 
   def new
@@ -29,8 +31,11 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @parents = Category.where(ancestry: nil)
-    @images = @item.images
- end
+    @images = @item.images 
+    @comment = current_user.comments.new
+    @comments = @item.comments.includes(:user)
+    @comment = @item.comments.build
+  end
 
   def get_category_children
     @category_children = Category.find_by(id: params[:parent_name], ancestry: nil).children
@@ -58,6 +63,6 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name,:explain,:status_id,:delivery_cost_id,:area_id,:brand,:limit_id,:price,:category_id,images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
+    params.require(:item).permit(:post_content,:name,:explain,:status_id,:delivery_cost_id,:area_id,:brand,:limit_id,:price,:category_id,:buyer_id,images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
   end
 end

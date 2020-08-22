@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_072017) do
+ActiveRecord::Schema.define(version: 2020_08_21_061323) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "post", null: false
@@ -37,10 +37,19 @@ ActiveRecord::Schema.define(version: 2020_08_17_072017) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.string "ancestry"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "ancestry"
-    t.index ["ancestry"], name: "index_categories_on_ancestry"
+  end
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "comment_content"
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["item_id"], name: "index_comments_on_item_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -55,16 +64,16 @@ ActiveRecord::Schema.define(version: 2020_08_17_072017) do
     t.string "name", null: false
     t.text "explain"
     t.integer "price", null: false
-    t.integer "buyer_id"
+    t.integer "buyer_id", default: 0
+    t.integer "status_id", null: false
+    t.integer "delivery_cost_id", null: false
+    t.integer "area_id", null: false
+    t.integer "limit_id", null: false
+    t.string "brand"
+    t.integer "user_id", null: false
+    t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "category_id"
-    t.integer "status_id"
-    t.integer "delivery_cost_id"
-    t.integer "area_id"
-    t.integer "limit_id"
-    t.string "brand"
-    t.integer "user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -87,5 +96,7 @@ ActiveRecord::Schema.define(version: 2020_08_17_072017) do
 
   add_foreign_key "addresses", "users"
   add_foreign_key "cards", "users"
+  add_foreign_key "comments", "items"
+  add_foreign_key "comments", "users"
   add_foreign_key "images", "items"
 end

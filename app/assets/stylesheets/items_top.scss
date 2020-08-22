@@ -60,6 +60,10 @@ section{
   display: inline-block; 
   float: left;
   background-color: #fff;
+  img{
+    height: 100%;
+    width: 100%;
+  }
 }
 
   .section{
@@ -125,7 +129,7 @@ section{
         margin-block-end: 1em;
         margin-inline-start: 40px;
         margin-inline-end: 40px;
-      
+      }
         .productList--img {
           width: 250px;
           height: 150px;
@@ -134,7 +138,7 @@ section{
           margin: 0;
           z-index: auto;
         }
-      }
+      
 
       .details{
         font-size: 16px;
@@ -142,16 +146,16 @@ section{
       ul{
         display: flex;
         list-style: none;
-
-      i{
-        padding-left: 30px;
       }
 
       li{
         display: list-item;
         text-align: -webkit-match-parent;
       }
-
+    }
+    i{
+      padding-left: 30px;
+    }
       .tax {
         font-size: 10px;
         text-align: left;
@@ -161,8 +165,7 @@ section{
         margin-inline-start: 0px;
         margin-inline-end: 0px;
       }
-    }
-  }    
+    
       .fa-star:before {
         content: "\f005";
       }

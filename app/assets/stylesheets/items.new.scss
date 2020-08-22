@@ -3,6 +3,7 @@
   padding:0 50px;
   width: 1450px;
   background-color:#EEEEEE	;
+  overflow: scroll;
   
   .contents{
     width: 1300px;
@@ -41,7 +42,7 @@
   }
 
 
-.name{
+.name1{
   margin-top: 30px;
   margin-bottom: 16px;
   padding-top: 15px;
@@ -234,7 +235,9 @@
 .new{
   text-align: center;
   margin-top: 30px;
+  
 }
 .newbtn{
   background-color: red;
+  width: 200px;
 }
