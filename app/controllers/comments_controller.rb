@@ -13,8 +13,7 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:comment_content).merge(user_id: current_user.id, item_id: params[:item_id])
   end
   def destroy
-    @comment = Comment.find_by(params[:id])
-    @comment.destroy
+    @comment = Comment.find(params[:id])
     redirect_back(fallback_location: root_path)
   end
   def correct_user
