@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.includes(:images).order('created_at DESC')
- 
     @items_index = @items.order(updated_at: :desc).page(params[:page]).per(5)
     @parents = Category.where(ancestry: nil)
     @ladies = Category.find(1).subtree
@@ -52,6 +51,12 @@ class ItemsController < ApplicationController
     @parents = Category.where(ancestry: nil)
   end  
 
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
+    redirect_to root_path
+  end
+
   def update
     item = Item.find(params[:id])
     if item.update(item_params)
@@ -65,4 +70,7 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name,:explain,:status_id,:delivery_cost_id,:area_id,:brand,:limit_id,:price,:category_id,:buyer_id,images_attributes:[:image, :_destroy, :id])
   end
+
+
 end
+
