@@ -1,83 +1,85 @@
 .edit{
   width: 100vw;
 
-}
-.edit_form  { 
-  margin: 0 auto;
-  background-color:#EEEEEE	;
-  width:1500px;
-  padding:30px 50px;
-  font-size: 20px;}
+  .edit_form  { 
+    margin: 0 auto;
+    background-color:#EEEEEE	;
+    width:1500px;
+    padding:30px 50px;
+    font-size: 20px;
 
-.edit_constraint{
-  font-size: 30px;
-  display: flex;
-}
+      .edit_constraint{
+        font-size: 30px;
+        display: flex;
+      }
   
-  .edit_imagemust{
-    color: red;
-  } 
-  .edit_hidden-content{
-    padding: 0 40px;
-    padding-top: 15px;
-    display: flex;
-    justify-content: space-around;
-  }
+        .edit_imagemust{
+          color: red;
+        } 
+      .edit_hidden-content{
+        padding: 0 40px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-around;
+      }
 
-  #image-box{
-    height: 300px;
-    justify-content: start;
-  }
-  #previews{
-    
-    position: absolute;
-    margin-bottom: 100px;
-  }
-  .edit_block{
-    position: relative;
-    margin-top: 450px;
-    }
-   .js-file_group{
-     margin-top: 220px;
-  }
-.js-remove{
-  font-size: 25px;
-  color: red;
-}
-.edit_listing-form-box{
-  margin-top: 30px;
-  margin-bottom: 50px;
-  font-size: 30px;
-  
-}
-.edit_listing-select-wrapper__box{
-  margin-top: 5px;
-  margin-left: 20px;
-  font-size: 25px;
-}
-
-        .edit_item{
-          font-size: 30px;
-          margin-top: 30px;
-          margin-bottom: 16px;
-          padding-top: 15px;
+      #image-box{
+        height: 300px;
+        justify-content: start;
+      }
+        #previews{
+          
+          position: absolute;
+          margin-bottom: 100px;
         }
-          .edit_iteminfo{
-            display: flex;
+      .edit_block{
+        position: relative;
+        margin-top: 450px;
+        }
+        .js-file_group{
+          margin-top: 220px;
+        }
+          .js-remove{
+            font-size: 25px;
+            color: red;
           }
-            .edit_iteminfo__name{
-              margin-right: 30px;
-            }
-            .edit_iteminfo__must{
-              color: red;
-            }
-            .edit_nameform{
-              width: 800px;
-              height: 50px;
-              background-color: white;
-              border: inset;
-              margin-top: 30px;
-            }
+  }
+      .edit_listing-form-box{
+        margin-top: 30px;
+        margin-bottom: 50px;
+        font-size: 30px;
+
+        .edit_listing-select-wrapper__box{
+          margin-top: 5px;
+          margin-left: 20px;
+          font-size: 25px;
+        }
+      }
+
+      .edit_item{
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 16px;
+        padding-top: 15px;
+      
+        .edit_iteminfo{
+          display: flex;
+        }
+          .edit_iteminfo__name{
+            margin-right: 30px;
+          }
+          .edit_iteminfo__must{
+            color: red;
+          }
+      }
+      
+        .edit_nameform{
+          width: 800px;
+          height: 50px;
+          background-color: white;
+          border: inset;
+          margin-top: 30px;
+        }
 
           .edit_explainform{
             border: inset;
@@ -85,65 +87,70 @@
             width: 800px;
           }
 
-          .edit_statusinfo{
-            margin-top: 30px;
-            display: flex;
+        .edit_statusinfo{
+          margin-top: 30px;
+          display: flex;
+
+          .edit_statusinfo__name{
+            margin-right: 30px; 
           }
-            .edit_statusinfo__name{
-              margin-right: 30px; 
-            }
             .edit_statusinfo__must{
               color: red;
             }
-          .edit_areainfo{
-            margin-top: 30px;
-            display: flex;
+        }
+
+        .edit_areainfo{
+          margin-top: 30px;
+          display: flex;
+
+          .edit_areainfo__name{
+            margin-right: 30px; 
           }
-            .edit_areainfo__name{
-              margin-right: 30px; 
-            }
             .edit_areainfo__must{
               color: red;
             }
-            .edit_limitinfo{
-              margin-top: 30px;
-              display: flex;
-            }
-            .edit_limitinfo__name{
-              margin-right: 30px;
-            }
+        }
+
+        .edit_limitinfo{
+          margin-top: 30px;
+          display: flex;
+        
+          .edit_limitinfo__name{
+            margin-right: 30px;
+          }
             .edit_limitinfo__must{
               color: red;
             }
-            .edit_deliveryinfo{
-              margin-top: 30px;
-              display: flex;
-            }
-            .edit_deliveryinfo__name{
-              margin-right: 30px;
-            }
+        }
+
+        .edit_deliveryinfo{
+          margin-top: 30px;
+          display: flex;
+
+          .edit_deliveryinfo__name{
+            margin-right: 30px;
+          }
             .edit_deliveryinfo__must{
               color: red;
             }
+        }
 
-          .edit_priceinfo{
-            margin-top: 30px;
-            display: flex;
-          }
+        .edit_priceinfo{
+          margin-top: 30px;
+          display: flex;
         
-            .edit_priceinfo__name{
-              margin-right: 30px;
-            }
+          .edit_priceinfo__name{
+            margin-right: 30px;
+          }
             .edit_priceinfo__must{
               color: red;
             }
-      .edit_box{
-        text-align: center;
-      }
-      .edit_new{
-        margin-top: 50px;
-      }
-     
+        }
+
+    .edit_box{
+      text-align: center;
+    }
+
       *,
       *:before,
       *:after {
@@ -162,8 +169,7 @@
         padding: 30px;
       }
       
-      .edit_newbtn,
-      button.edit_newbtn {
+      .edit_newbtn {
         font-size: 1.6rem;
         font-weight: 700;
         line-height: 1.5;
@@ -186,6 +192,7 @@
       }
       
       .edit_new {
+        margin-top: 50px;
         display: inline-block;
       
         padding: 0.5rem;
@@ -237,3 +244,4 @@
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
       }
+ }

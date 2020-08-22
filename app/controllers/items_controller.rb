@@ -60,8 +60,12 @@ class ItemsController < ApplicationController
   end  
 
   def destroy
-    @item.destroy
-    redirect_to root_path
+    if @item.destroy
+      redirect_to root_path
+    else
+      redirect_to item_path(@item.id)
+      flash.now[:aret] = '商品の削除ができませんでした'
+    end
   end
 
   def update
@@ -72,13 +76,14 @@ class ItemsController < ApplicationController
     end
   end
 
-  def set_item
-    @item = Item.faind(params[:id])
-  end
-
   private
   def item_params
     params.require(:item).permit(:post_content,:name,:explain,:status_id,:delivery_cost_id,:area_id,:brand,:limit_id,:price,:category_id,:buyer_id,images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
   end
+
+  def set_item
+    @item = Item.faind(params[:id])
+  end
+
 end
 
