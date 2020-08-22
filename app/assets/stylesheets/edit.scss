@@ -65,10 +65,10 @@
         .edit_iteminfo{
           display: flex;
         }
-          .edit_iteminfo__name{
+          &__name{
             margin-right: 30px;
           }
-          .edit_iteminfo__must{
+          &__must{
             color: red;
           }
       }
@@ -91,10 +91,10 @@
           margin-top: 30px;
           display: flex;
 
-          .edit_statusinfo__name{
+          &__name{
             margin-right: 30px; 
           }
-            .edit_statusinfo__must{
+            &__must{
               color: red;
             }
         }
@@ -103,10 +103,10 @@
           margin-top: 30px;
           display: flex;
 
-          .edit_areainfo__name{
+          &__name{
             margin-right: 30px; 
           }
-            .edit_areainfo__must{
+            &__must{
               color: red;
             }
         }
@@ -115,10 +115,10 @@
           margin-top: 30px;
           display: flex;
         
-          .edit_limitinfo__name{
+          &__name{
             margin-right: 30px;
           }
-            .edit_limitinfo__must{
+            .&__must{
               color: red;
             }
         }
@@ -127,10 +127,10 @@
           margin-top: 30px;
           display: flex;
 
-          .edit_deliveryinfo__name{
+          &__name{
             margin-right: 30px;
           }
-            .edit_deliveryinfo__must{
+            &__must{
               color: red;
             }
         }
@@ -139,10 +139,10 @@
           margin-top: 30px;
           display: flex;
         
-          .edit_priceinfo__name{
+          &__name{
             margin-right: 30px;
           }
-            .edit_priceinfo__must{
+            &__must{
               color: red;
             }
         }
