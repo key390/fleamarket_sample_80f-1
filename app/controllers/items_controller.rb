@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only:[:show, :edit, :destroy, :update]
+
   def index
     @items = Item.includes(:images).order('created_at DESC')
- 
     @items_index = @items.order(updated_at: :desc).page(params[:page]).per(5)
     @parents = Category.where(ancestry: nil)
     @ladies = Category.find(1).subtree
@@ -30,7 +31,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @parents = Category.where(ancestry: nil)
     @images = @item.images 
     @comment = current_user.comments.new
@@ -46,7 +46,6 @@ class ItemsController < ApplicationController
       @category_grandchildren = Category.find("#{params[:child_id]}").children
   end
   
-
   def create
     @item = Item.new(item_params)
     if @item.save
@@ -57,22 +56,24 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
     @parents = Category.where(ancestry: nil)
   end  
+
   def destroy
-    item = Item.find(params[:id])
-    item.destroy
+    @item.destroy
     redirect_to root_path
   end
 
   def update
-    item = Item.find(params[:id])
-    if item.update(item_params)
+    if @item.update(item_params)
       redirect_to root_path
     else
       redirect_to edit_item_path(item)
     end
+  end
+
+  def set_item
+    @item = Item.faind(params[:id])
   end
 
   private

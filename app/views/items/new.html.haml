@@ -1,11 +1,7 @@
 %body
   .wrapper
     = render "top-contents"
-<<<<<<< HEAD
 .form1
-=======
-.form
->>>>>>> parent of 61fb5fb... 単体テスト　モデル記述。
   .contents
     = form_with model:@item, local:true do |f|
       .images
@@ -30,11 +26,7 @@
               = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
               %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
                    
-<<<<<<< HEAD
       .name1
-=======
-      .name
->>>>>>> parent of 61fb5fb... 単体テスト　モデル記述。
         .item
           .iteminfo
             .iteminfo__name
@@ -49,21 +41,17 @@
               説明
             .iteminfo__must
               ※必須
-<<<<<<< HEAD
-          = f.text_area :explain, placeholder:"詳細記載",class: "explainform"             
-=======
           = f.text_area :explain, placeholder:"詳細記載",class: "explainform" 
-      -# .listing-form-box
-      -#   .listing-product-detail__category
-      -#     = f.label 'カテゴリー', class: 'listing-default__label'
-      -#     %span.listing-default--require ※必須
+      .listing-form-box
+        .listing-product-detail__category
+          = f.label 'カテゴリー', class: 'listing-default__label'
+          %span.listing-default--require ※必須
 
-          -# .listing-select-wrapper
-          -#   .listing-select-wrapper__box
-          -#     = f.collection_select :category_id, @category_parent_array, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
-          -#     %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
+          .listing-select-wrapper
+            .listing-select-wrapper__box
+              = f.collection_select :category_id, @category_parent_array, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+              %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
              
->>>>>>> parent of 61fb5fb... 単体テスト　モデル記述。
       .brand
         .item
           .iteminfo
