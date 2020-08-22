@@ -29,6 +29,7 @@
           .js-file_group{"data-index" => "#{@item.images.count}"}
             = file_field_tag :image, name: "item[images_attributes][#{@item.images.count}][image]", class: 'js-file'
             .js-remove 削除
+
       .edit_listing-form-box
         .listing-product-detail__category
           = f.label 'カテゴリー', class: 'listing-default__label'
@@ -104,6 +105,3 @@
       .edit_box
         .edit_new
           = f.submit "更新して出品する",class: "edit_newbtn"  
-
-
-        

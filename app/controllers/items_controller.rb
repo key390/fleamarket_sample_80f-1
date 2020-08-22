@@ -56,11 +56,14 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @parents = Category.where(ancestry: nil)
   end  
+<<<<<<< HEAD
   def destroy
     item = Item.find(params[:id])
     item.destroy
     redirect_to root_path
   end
+=======
+>>>>>>> parent of 8970e4b... コメントアウト記述削除
 
   def update
     item = Item.find(params[:id])
@@ -75,4 +78,8 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name,:explain,:status_id,:delivery_cost_id,:area_id,:brand,:limit_id,:price,:category_id,:buyer_id,images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> parent of 8970e4b... コメントアウト記述削除

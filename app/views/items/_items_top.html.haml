@@ -9,6 +9,7 @@
     .productBox
       .productHead
         - @items_index.each do |item|
+<<<<<<< HEAD
           .productList
             = link_to item_path(item), class:"link"do
               %figure.productList--img
@@ -29,6 +30,28 @@
                   SOLD
       .pagenation
         = paginate @items_index
+=======
+          .productLists
+            .productList
+              = link_to item_path(item), class:"link"do
+                %figure.productList--img
+                  = image_tag item.images[0].image.url, size:"250x200" , alt:"商品写真"
+              .productList--body
+                %h3.name
+                  = item.name
+                .details
+                  %ul
+                    %li.en
+                      = "#{item.price}円"
+                  %p.tax
+                    (税込)
+              -if item.buyer_id.present?
+                .items-box_photo__sold
+                  .items-box_photo__sold__inner
+                    SOLD
+    .pagenation
+      = paginate @items_index
+>>>>>>> parent of 8970e4b... コメントアウト記述削除
 
   %section.pickupContainer
     %h2.head
