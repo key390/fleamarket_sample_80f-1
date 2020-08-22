@@ -186,7 +186,23 @@
     color: #3CCACE;
   }
 }
-
+.comments{
+  margin-top: 10px;
+  padding: 24px;
+  background-color: white;
+  overflow: scroll;
+  height: 90px;
+  a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+}
+.commentscc{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
 .related-items{
   .related-items-category{
     margin: 24px 8px;
