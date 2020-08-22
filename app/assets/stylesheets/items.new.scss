@@ -1,12 +1,54 @@
-.form{
+.form1{
+  height: 100vh;
+  padding:0 50px;
+  width: 1450px;
   background-color:#EEEEEE	;
-  width:100vw;
-  padding:30px 50px;
-  font-size: 20px;
+  overflow: scroll;
+  
+  .contents{
+    width: 1300px;
+    display: flex;
+    
+  }
 }
-    .contents{
-      width: 1300px;
-      text-align: left;
+  .constraint{
+    display: flex;
+    
+  }
+
+  .images{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  }
+  
+  .imageindicate{
+    width:110px;
+  }
+  .imagemust{
+    color: red;
+    margin-left: 5px;
+    width: 100px;
+  }
+  .listing-form-box{
+    margin-top: 40px;
+  }
+  .hidden-content{
+  padding: 0 40px;
+  display: flex;
+  padding-top: 15px;
+  justify-content: space-around;
+  }
+
+
+.name1{
+  margin-top: 30px;
+  margin-bottom: 16px;
+  padding-top: 15px;
+
+}
+    .item{
       display: flex;
     }
 
@@ -112,23 +154,14 @@
   .delivery_cost {
     margin-bottom: 16px;
   }
-  ​
-  .price1{
-    margin-bottom: 16px;
-  }
-  ​
-  ​
-  .new{
-    text-align: center;
-    margin-top: 50px;
-  }
-  .newbtn{
-    background-color: red;
-  }
 
-
-
-
-
-
-
+}
+.new{
+  text-align: center;
+  margin-top: 30px;
+  
+}
+.newbtn{
+  background-color: red;
+  width: 200px;
+}

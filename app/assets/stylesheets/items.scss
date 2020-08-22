@@ -8,6 +8,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: “Source Sans Pro”, Helvetica, Arial, “游ゴシック体“, “YuGothic”, “メイリオ“, “Meiryo”, sans-serif;
+  width: 1450px;
 }
 .titlehead {
   padding: 0 60px;
@@ -100,6 +101,10 @@ body {
             color: #333;
             line-height: 38px;
             padding: 0 0 0 16px;
+            a{
+              color: #333;
+              text-decoration: none;
+            }
           }
           &__lis4{
             color: #333;
@@ -203,84 +208,41 @@ body {
       transform: translateX(-50%);
     }
   }
-  &__three{
-    text-align: center;
-    display: flex;
-    max-width: 1020px;
-    width: 100%;
-    margin: 0 auto;
-    &__lk1{
-      width: 30%;
-      margin: 16px 5% 0 0;
-      text-align: left;
+    &__three{
+      text-align: center;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      &__gt{
-        position: relative;
-        margin-bottom: 20px;
-        &__na{
-          display: inline-block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: 4%;
-          font-size: 30px;
-          text-align: center;
-          margin: 0 5px 0 0;
-          padding: 10px 20px;
-          background-color: #3CCACE;
-          color: #fff;
-        }
-        img{
-          width: 100%;
-          vertical-align: bottom;
-        }
-      }
-      &__rt{
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 50px;
-        margin: 0 0 0 2px;
-        span{
-          color: #3CCACE;
-        }
-      }
-      &__rt2{
-        font-size: 18px;
-        line-height: 1.5;
-        margin: 16px 0 0;
-      }
-    }
-    &__lk2{
-      width: 30%;
-      margin: 16px 5% 0 0;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      &__gt2{
-        position: relative;
-        margin-bottom: 20px;
-        &__na2{
-          display: inline-block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: 4%;
-          font-size: 30px;
-          text-align: center;
-          margin: 0 5px 0 0;
-          padding: 10px 20px;
-          background-color: #3CCACE;
-          color: #fff;
-        }
+      max-width: 1020px;
+      width: 100%;
+      margin: 0 auto;
+      &__lk1{
+        width: 30%;
+        margin: 16px 5% 0 0;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__gt{
+          position: relative;
+          margin-bottom: 20px;
+          &__na{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 4%;
+            font-size: 30px;
+            text-align: center;
+            margin: 0 5px 0 0;
+            padding: 10px 20px;
+            background-color: #3CCACE;
+            color: #fff;
+          }
           img{
             width: 100%;
             vertical-align: bottom;
           }
-      }
-        &__ol{
+        }
+        &__rt{
           font-weight: bold;
           font-size: 24px;
           line-height: 50px;
@@ -289,57 +251,100 @@ body {
             color: #3CCACE;
           }
         }
-            &__rt3{
-              font-size: 18px;
-              line-height: 1.5;
-              margin: 16px 0 0;
-            }
-    }
-    &__lk3{
-      width: 30%;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 16px 5% 0 0;
-      &__gt3{
-        position: relative;
-        margin-bottom: 20px;
-        &__na3{
-          display: inline-block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: 4%;
-          font-size: 30px;
-          text-align: center;
-          margin: 0 5px 0 0;
-          padding: 10px 20px;
-          background-color: #3CCACE;
-          color: #fff;
+        &__rt2{
+          font-size: 18px;
+          line-height: 1.5;
+          margin: 16px 0 0;
         }
-          img{
-            width: 100%;
-            vertical-align: bottom;
-          }
       }
-        &__ds{
-          font-weight: bold;
-          font-size: 24px;
-          line-height: 50px;
-          margin: 0 0 0 2px;
-          span{
-            color: #3CCACE;
+      &__lk2{
+        width: 30%;
+        margin: 16px 5% 0 0;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__gt2{
+          position: relative;
+          margin-bottom: 20px;
+          &__na2{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 4%;
+            font-size: 30px;
+            text-align: center;
+            margin: 0 5px 0 0;
+            padding: 10px 20px;
+            background-color: #3CCACE;
+            color: #fff;
           }
-        }
-            &__rt4{
-              font-size: 18px;
-              line-height: 1.5;
-              margin: 16px 0 0;
+            img{
+              width: 100%;
+              vertical-align: bottom;
             }
+        }
+          &__ol{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 50px;
+            margin: 0 0 0 2px;
+            span{
+              color: #3CCACE;
+            }
+          }
+              &__rt3{
+                font-size: 18px;
+                line-height: 1.5;
+                margin: 16px 0 0;
+              }
+      }
+      &__lk3{
+        width: 30%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 16px 5% 0 0;
+        &__gt3{
+          position: relative;
+          margin-bottom: 20px;
+          &__na3{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 4%;
+            font-size: 30px;
+            text-align: center;
+            margin: 0 5px 0 0;
+            padding: 10px 20px;
+            background-color: #3CCACE;
+            color: #fff;
+          }
+            img{
+              width: 100%;
+              vertical-align: bottom;
+            }
+        }
+          &__ds{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 50px;
+            margin: 0 0 0 2px;
+            span{
+              color: #3CCACE;
+            }
+          }
+              &__rt4{
+                font-size: 18px;
+                line-height: 1.5;
+                margin: 16px 0 0;
+              }
+      }
     }
   }
-}
 .photo2{
   background-image: image-url('bg-topMiddleDl-pict.jpg');
   background-position: bottom right;
