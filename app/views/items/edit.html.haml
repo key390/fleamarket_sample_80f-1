@@ -1,8 +1,6 @@
 %body
-  = render 'layouts/notifications'
   .wrapper
     = render "top-contents"
-
   .edit_form
     = form_with model:@item, local:true do |f|
       .edit_constraint
