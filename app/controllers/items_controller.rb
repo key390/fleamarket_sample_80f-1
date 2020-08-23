@@ -18,8 +18,8 @@ class ItemsController < ApplicationController
     @appliances= Category.find(874).subtree
     @appliances_items = Item.where(category_id: @appliances)
     @last_appliances_item = @appliances_items.last
-    @items = current_user.items 
-    @item = current_user.items.new 
+    # @items = current_user.items 
+    # @item = current_user.items.new 
   end
 
   def new
