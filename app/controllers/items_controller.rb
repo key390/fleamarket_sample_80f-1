@@ -18,8 +18,8 @@ class ItemsController < ApplicationController
     @appliances= Category.find(874).subtree
     @appliances_items = Item.where(category_id: @appliances)
     @last_appliances_item = @appliances_items.last
-    @items = current_user.items 
-    @item = current_user.items.new 
+    # @items = current_user.items 
+    # @item = current_user.items.new 
   end
 
   def new
@@ -32,7 +32,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @parents = Category.where(ancestry: nil)
     @images = @item.images 
-    @comment = current_user.comments.new
+    # @comment = current_user.comments.new
     @comments = @item.comments.includes(:user)
     @comment = @item.comments.build
   end
