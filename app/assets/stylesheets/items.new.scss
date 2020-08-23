@@ -24,14 +24,15 @@
   
   .imageindicate{
     width:110px;
+    font-size: 20px;
 }
   .imagemust{
+    font-size: 15px;
     color: red;
-    margin-left: 5px;
     width: 100px;
   }
   .listing-form-box{
-    padding: 20px 0;
+    padding: 50px 0;
     .listing-product-detail__category{
       display: flex;
       // padding: 0 80px;
@@ -72,11 +73,11 @@
             margin-bottom: 20px;
             width:110px;
           }
-          .imagemust{
-            color: red;
-            margin-left: 45px;
-            width: 100px;
-          }
+          // .imagemust{
+          //   color: red;
+          //   margin-left: 45px;
+          //   width: 100px;
+          // }
         .hidden-content{
           padding: 0 40px;
           padding-top: 15px;
