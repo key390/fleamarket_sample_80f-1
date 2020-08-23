@@ -4,7 +4,7 @@
     %meta{charset: "utf-8"}
     
   %section.pickupContainer
-    %h2.head
+    %h2.item_head
       新規出品商品
     .productBox
       .productHead
@@ -31,7 +31,7 @@
         = paginate @items_index
 
   %section.pickupContainer
-    %h2.head
+    %h2.item_head
       ピックアップカテゴリ
 
     .productBoxes
@@ -44,7 +44,7 @@
               %h3
                 このカテゴリの新規投稿商品はありません。
             - else
-              = link_to "#", class:"link" do
+              = link_to item_path(@items), class:"link" do
                 %figure.productList--img
                   = image_tag @last_ladies_item.images[0].image.url,size:"250x200" , alt:"商品写真"
               .productList--body

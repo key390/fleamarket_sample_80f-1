@@ -1,6 +1,8 @@
-%body.edit
+%body
+  = render 'layouts/notifications'
   .wrapper
     = render "top-contents"
+
   .edit_form
     = form_with model:@item, local:true do |f|
       .edit_constraint
@@ -31,22 +33,16 @@
             .js-remove 削除
 
       .listing-form-box
+        カテゴリー
+        %span.listing-default--require ※必須
+          
         .listing-product-detail__category
-          = f.label 'カテゴリー', class: 'listing-default__label'
-          %span.listing-default--require ※必須
+          = f.label 'カテゴリー選択', class: 'listing-default__label'
           
           .listing-select-wrapper
             .listing-select-wrapper__box
               = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
               %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
-      -# .edit_listing-form-box
-      -#   .edit_listing-product-detail__category
-      -#     = f.label 'カテゴリー', class: 'listing-default__label'
-      -#     %span.edit_listing-default--require ※必須
-      -#     .edit_listing-select-wrapper
-      -#       .edit_listing-select-wrapper__box
-      -#         = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
-      -#         %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
               
       .edit_name
         .edit_item
