@@ -63,7 +63,7 @@
               .delete-btn
                 削除する！
           .edit
-            = link_to "#" do
+            = link_to edit_item_path(@item.id) do
               .edit-btn
                 編集する！
         - else
