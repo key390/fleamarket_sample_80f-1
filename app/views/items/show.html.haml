@@ -62,8 +62,8 @@
             = link_to item_path(@item.id), method: :delete do
               .delete-btn
                 削除する！
-          .edit
-            = link_to edit_item_path(@item.id) do
+          .edit 
+            = link_to edit_item_path(@item.id),"data-turbolinks": false do
               .edit-btn
                 編集する！
         - else
