@@ -1,13 +1,10 @@
-.edit{
-  width: 100vw;
-
-  .edit_form  { 
+.edit_form  { 
     margin: 0 auto;
-    background-color:#EEEEEE	;
-    width:1500px;
+    background-color: #f8f8f8;
     padding:30px 50px;
     font-size: 20px;
-
+    text-align: center;
+    width: 1450px;
       .edit_constraint{
         font-size: 30px;
         display: flex;
@@ -24,35 +21,46 @@
       }
 
       #image-box{
-        height: 300px;
+        height: 350px;
+        display: flex;
         justify-content: start;
       }
         #previews{
-          
           position: absolute;
-          margin-bottom: 100px;
+          margin-bottom: 50px;
         }
       .edit_block{
         position: relative;
         margin-top: 450px;
         }
         .js-file_group{
+          
           margin-top: 220px;
         }
+          .js-file{
+            width: 240px;
+            margin-right:20px;
+          }
           .js-remove{
             font-size: 25px;
             color: red;
           }
   }
-      .edit_listing-form-box{
+      .listing-form-box{
         margin-top: 30px;
         margin-bottom: 50px;
         font-size: 30px;
+        display: flex;
+        
+          .listing-default__label{
+            margin-left:0;
+          }
 
-        .edit_listing-select-wrapper__box{
+        .listing-select-wrapper__box{
           margin-top: 5px;
           margin-left: 20px;
           font-size: 25px;
+          
         }
       }
 
@@ -61,17 +69,17 @@
         margin-top: 30px;
         margin-bottom: 16px;
         padding-top: 15px;
-      
+       
         .edit_iteminfo{
           display: flex;
         }
-          &__name{
+        .edit_iteminfo__name{
             margin-right: 30px;
           }
-          &__must{
+        .edit_iteminfo__must{
             color: red;
-          }
-      }
+        }
+     }
       
         .edit_nameform{
           width: 800px;
@@ -244,4 +252,3 @@
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
       }
- }

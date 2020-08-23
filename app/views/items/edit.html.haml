@@ -1,6 +1,8 @@
-%body.edit
+%body
+  = render 'layouts/notifications'
   .wrapper
     = render "top-contents"
+
   .edit_form
     = form_with model:@item, local:true do |f|
       .edit_constraint
@@ -31,9 +33,11 @@
             .js-remove 削除
 
       .listing-form-box
+        カテゴリー
+        %span.listing-default--require ※必須
+          
         .listing-product-detail__category
-          = f.label 'カテゴリー', class: 'listing-default__label'
-          %span.listing-default--require ※必須
+          = f.label 'カテゴリー選択', class: 'listing-default__label'
           
           .listing-select-wrapper
             .listing-select-wrapper__box
