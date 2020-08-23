@@ -1,0 +1,247 @@
+.edit{
+  width: 100vw;
+
+  .edit_form  { 
+    margin: 0 auto;
+    background-color:#EEEEEE	;
+    width:1500px;
+    padding:30px 50px;
+    font-size: 20px;
+
+      .edit_constraint{
+        font-size: 30px;
+        display: flex;
+      }
+  
+        .edit_imagemust{
+          color: red;
+        } 
+      .edit_hidden-content{
+        padding: 0 40px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      #image-box{
+        height: 300px;
+        justify-content: start;
+      }
+        #previews{
+          
+          position: absolute;
+          margin-bottom: 100px;
+        }
+      .edit_block{
+        position: relative;
+        margin-top: 450px;
+        }
+        .js-file_group{
+          margin-top: 220px;
+        }
+          .js-remove{
+            font-size: 25px;
+            color: red;
+          }
+  }
+      .edit_listing-form-box{
+        margin-top: 30px;
+        margin-bottom: 50px;
+        font-size: 30px;
+
+        .edit_listing-select-wrapper__box{
+          margin-top: 5px;
+          margin-left: 20px;
+          font-size: 25px;
+        }
+      }
+
+      .edit_item{
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 16px;
+        padding-top: 15px;
+      
+        .edit_iteminfo{
+          display: flex;
+        }
+          &__name{
+            margin-right: 30px;
+          }
+          &__must{
+            color: red;
+          }
+      }
+      
+        .edit_nameform{
+          width: 800px;
+          height: 50px;
+          background-color: white;
+          border: inset;
+          margin-top: 30px;
+        }
+
+          .edit_explainform{
+            border: inset;
+            height: 500px;
+            width: 800px;
+          }
+
+        .edit_statusinfo{
+          margin-top: 30px;
+          display: flex;
+
+          &__name{
+            margin-right: 30px; 
+          }
+            &__must{
+              color: red;
+            }
+        }
+
+        .edit_areainfo{
+          margin-top: 30px;
+          display: flex;
+
+          &__name{
+            margin-right: 30px; 
+          }
+            &__must{
+              color: red;
+            }
+        }
+
+        .edit_limitinfo{
+          margin-top: 30px;
+          display: flex;
+        
+          &__name{
+            margin-right: 30px;
+          }
+            .&__must{
+              color: red;
+            }
+        }
+
+        .edit_deliveryinfo{
+          margin-top: 30px;
+          display: flex;
+
+          &__name{
+            margin-right: 30px;
+          }
+            &__must{
+              color: red;
+            }
+        }
+
+        .edit_priceinfo{
+          margin-top: 30px;
+          display: flex;
+        
+          &__name{
+            margin-right: 30px;
+          }
+            &__must{
+              color: red;
+            }
+        }
+
+    .edit_box{
+      text-align: center;
+    }
+
+      *,
+      *:before,
+      *:after {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+      }
+      
+      html {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      
+      /* 背景用*/
+      body {
+        padding: 30px;
+      }
+      
+      .edit_newbtn {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.5;
+        position: relative;
+        display: inline-block;
+        padding: 1rem 4rem;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        color: #212529;
+        border-radius: 0.5rem;
+      }
+      
+      .edit_new {
+        margin-top: 50px;
+        display: inline-block;
+      
+        padding: 0.5rem;
+      
+        border-radius: 100vh;
+        background: #f2f5f6;
+        background: -webkit-linear-gradient(
+          to top,
+          #f2f5f6 0%,
+          #e3eaed 37%,
+          #96a1a5 100%
+        );
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(#f2f5f6),
+          color-stop(37%, #e3eaed),
+          to(#96a1a5)
+        );
+        background: -webkit-linear-gradient(
+          top,
+          #f2f5f6 0%,
+          #e3eaed 37%,
+          #96a1a5 100%
+        );
+        background: linear-gradient(to bottom, #f2f5f6 0%, #e3eaed 37%, #96a1a5 100%);
+      
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5f6', endColorstr='#96a1a5', GradientType=0);
+      }
+      
+      .edit_newbtn{
+        border-radius: 100vh;
+        background: #e3eaed;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(#e3eaed),
+          to(#f2f5f6)
+        );
+        background: -webkit-linear-gradient(top, #e3eaed 0%, #f2f5f6 100%);
+        background: linear-gradient(to bottom, #e3eaed 0%, #f2f5f6 100%);
+      
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e3eaed', endColorstr='#f2f5f6', GradientType=0);
+      }
+      
+      .edit_newbtn:hover {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+ }

@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only:[:show, :edit, :destroy, :update]
+
   def index
-    @items = Item.includes(:images)
+    @items = Item.includes(:images).order('created_at DESC')
     @items_index = @items.order(updated_at: :desc).page(params[:page]).per(5)
     @parents = Category.where(ancestry: nil)
     @ladies = Category.find(1).subtree
@@ -29,7 +31,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @parents = Category.where(ancestry: nil)
     @images = @item.images 
     @comment = current_user.comments.new
@@ -41,28 +42,48 @@ class ItemsController < ApplicationController
     @category_children = Category.find_by(id: params[:parent_name], ancestry: nil).children
   end
 
-
-
   def get_category_grandchildren
       @category_grandchildren = Category.find("#{params[:child_id]}").children
   end
-
+  
   def create
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path 
     else 
-      redirect_to new_item_path
+      redirect_to :new
     end  
+  end
+
+  def edit
+    @parents = Category.where(ancestry: nil)
   end  
+
   def destroy
-    item = Item.find(params[:id])
-    item.destroy
-    redirect_to root_path
+    if @item.destroy
+      redirect_to root_path
+    else
+      redirect_to item_path(@item.id)
+      flash.now[:aret] = '商品の削除ができませんでした'
+    end
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to edit_item_path(item)
+    end
   end
 
   private
   def item_params
     params.require(:item).permit(:post_content,:name,:explain,:status_id,:delivery_cost_id,:area_id,:brand,:limit_id,:price,:category_id,:buyer_id,images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
   end
+
+  def set_item
+    @item = Item.faind(params[:id])
+  end
+
 end
+
