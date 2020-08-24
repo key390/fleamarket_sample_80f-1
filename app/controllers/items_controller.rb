@@ -72,7 +72,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to root_path
     else
-      redirect_to update notice: '未入力があるため、更新ができませんでした'
+      redirect_to edit_item_path notice: '未入力があるため、更新ができませんでした'
     end
   end
 
