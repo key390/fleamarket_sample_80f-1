@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load', ()=> {
-  console.log("popopo2")
   // 画像用のinputを生成する関数
   const buildFileField = (num)=> {
     const html = `<div data-index="${num + 1}" class="js-file_group">
