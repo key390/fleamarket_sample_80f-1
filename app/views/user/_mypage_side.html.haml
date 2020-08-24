@@ -4,17 +4,17 @@
       マイページメニュー
     %br
       %li.mypage-side-box__exhibition
-        = link_to new_item_path(), class: "link_exhibition" do
+        = link_to new_item_path() do
           出品する
       %li.mypage-side-box__exhibited
-        = link_to "#", class: "link_exhibited" do
+        = link_to "#" do
           出品中の商品
       %li.mypage-side-box__plofile
-        = link_to "#", class: "link_plofile" do
+        = link_to user_index_path do
           本人情報
       %li.mypage-side-box__card
         = link_to new_card_path, class: "link_card","data-turbolinks": false do
           支払い方法の編集
       %li.mypage-side-box__logout
-        = link_to( destroy_user_session_path, method: :delete, class: "link_logout") do
+        = link_to( destroy_user_session_path, method: :delete) do
           ログアウト
