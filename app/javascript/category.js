@@ -43,6 +43,8 @@ $(function(){
         dataType: 'json'
       })
       .done(function(children){
+        $('#parent_category1').remove(); 
+        $('#parent_category2').remove(); 
         $('#children_wrapper').remove(); 
         $('#grandchildren_wrapper').remove();
         $('#size_wrapper').remove();

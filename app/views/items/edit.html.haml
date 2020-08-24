@@ -36,14 +36,15 @@
           
         .listing-product-detail__category
           = f.label 'カテゴリー選択', class: 'listing-default__label'
+
           .listing-select-wrapper
             .listing-select-wrapper__box
               = f.collection_select :category_id, @item.category.root.siblings, :id, :name, {selected: @item.category.root.id}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
               %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
-              = f.collection_select :category_id, @item.category.parent.siblings, :id, :name, {selected: @item.category.parent.id}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
-              %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
-              = f.collection_select :category_id, @item.category.siblings, :id, :name, {selected: @item.category.id}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
-              %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
+              = f.collection_select :category_id, @item.category.parent.siblings, :id, :name, {selected: @item.category.parent.id}, {class: 'listing-select-wrapper__box--select', id: 'parent_category1'}
+              
+              = f.collection_select :category_id, @item.category.siblings, :id, :name, {selected: @item.category.id}, {class: 'listing-select-wrapper__box--select', id: 'parent_category2'}
+              
       .edit_name
         .edit_item
           .edit_iteminfo
