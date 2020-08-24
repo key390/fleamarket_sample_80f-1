@@ -1,27 +1,44 @@
 .mypage_contents {
   display: flex;
+  background-color: white;
 }
 .mypage-main {
   float: right;
-  margin: 0 400px;
   width: 50vw;
+  margin: 0 400px;
   &__name {
     font-size: 30px;
     background-image: url();
   }
-  &__inf {
+  &__exhibited {
     border: 0;
-    background: #eee;
     font-size: 20px;
     margin: 30px 0;
-    width: 150px;
+    width: 350px;
+    height: 500px;
+    overflow: scroll;
   }
 }
-.mypage-main__text {
+.mypage-images {
+  height:330px;
+  width: 220px;
+  margin: 10px 5px;
+  display: inline-block; 
+  background-color: #fff;
+}
+.mypage-img {
+  height: 100%;
+  width: 100%;
+}
+.mypage-details {
+  font-size: 16px;
+}
+.mypage-tax {
   font-size: 10px;
-  padding: 0.5em 1em;
-  margin: 2em 0;
-  font-weight: bold;
-  border: solid 3px #000000;
-  width: 150px;
+  text-align: left;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }

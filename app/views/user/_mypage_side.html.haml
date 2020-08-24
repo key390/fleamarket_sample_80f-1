@@ -3,12 +3,12 @@
     %ul.mypage-side-box
       マイページメニュー
     %br
+      %li.mypage-side-box__inf
+        = link_to "#" do
+          お知らせ
       %li.mypage-side-box__exhibition
         = link_to new_item_path() do
           出品する
-      %li.mypage-side-box__exhibited
-        = link_to "#" do
-          出品中の商品
       %li.mypage-side-box__plofile
         = link_to user_index_path do
           本人情報
