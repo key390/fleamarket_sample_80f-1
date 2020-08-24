@@ -11,10 +11,11 @@
     background-color: white;
   }
 }
-  .constraint{
-    display: flex;
-    
-  }
+
+.new_constraint{
+  display: flex;
+  justify-content: center;
+}
 
   .images{
     display: flex;
@@ -23,15 +24,6 @@
     margin-top: 40px;
   }
   
-  .imageindicate{
-    width:110px;
-    font-size: 20px;
-}
-  .imagemust{
-    font-size: 15px;
-    color: red;
-    width: 100px;
-  }
   .listing-form-box{
     padding: 50px 0;
     .listing-product-detail__category{
@@ -47,12 +39,6 @@
 
       }
     }
-  }
-  .hidden-content{
-  padding: 0 40px;
-  display: flex;
-  padding-top: 15px;
-  justify-content: space-around;
   }
 
 
@@ -74,17 +60,7 @@
             margin-bottom: 20px;
             width:110px;
           }
-          // .imagemust{
-          //   color: red;
-          //   margin-left: 45px;
-          //   width: 100px;
-          // }
-        .hidden-content{
-          padding: 0 40px;
-          padding-top: 15px;
-          display: flex;
-          justify-content: space-around;
-        }
+
 
   .name{
     margin-top: 30px;
