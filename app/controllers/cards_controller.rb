@@ -1,7 +1,7 @@
 class CardsController < ApplicationController
 
   require "payjp"
-  before_action :set_card, only: [:show, :delete]
+  before_action :set_card, only: [:show, :delete, :new]
 
   def new
     card = Card.where(user_id: current_user.id)

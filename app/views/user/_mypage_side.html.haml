@@ -4,7 +4,7 @@
       マイページメニュー
     %br
       %li.mypage-side-box__exhibition
-        = link_to new_item_path(), class: "link_exhibition" do
+        = link_to new_item_path(), class: "link_exhibition","data-turbolinks": false do
           出品する
       %li.mypage-side-box__exhibited
         = link_to "#", class: "link_exhibited" do
@@ -12,9 +12,18 @@
       %li.mypage-side-box__plofile
         = link_to "#", class: "link_plofile" do
           本人情報
-      %li.mypage-side-box__card
-        = link_to new_card_path, class: "link_card","data-turbolinks": false do
-          支払い方法の編集
+      .mypage-side-box__card
+        - if @card.present?
+          %li
+            = link_to new_card_path, class: 'left-content__list-item',"data-turbolinks": false do
+              カード情報確認
+              = icon('far', 'align-justify',class:'contents_btn_cog')
+        - else
+          %li
+            = link_to new_card_path, class: 'left-content__list-item',"data-turbolinks": false do
+              カード登録
+              = icon('far', 'align-justify',class:'contents_btn_cog')
+        
       %li.mypage-side-box__logout
         = link_to( destroy_user_session_path, method: :delete, class: "link_logout") do
           ログアウト
