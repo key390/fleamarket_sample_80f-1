@@ -12,13 +12,13 @@
         .new_imagemust 
           ※必須
       .edit_hidden-content
-        = form_for @item do |f|
-          #image-box
-            #previews
-              - if @item.persisted?
-                - @item.images.each_with_index do |image, i|
-                  = image_tag image.image.url, data: { index: i }, width: "250", height: '200',class: 'edit-image'
-            .edit_block
+        -# = form_with model: @item, local: true do |f|
+        #image-box
+          #previews
+            - if @item.persisted?
+              - @item.images.each_with_index do |image, i|
+                = image_tag image.image.url, data: { index: i }, width: "250", height: '200',class: 'edit-image'
+          .edit_block
             = f.fields_for :images do |image|
               .js-file_group{"data-index" => "#{image.index}"}
                 = image.file_field :image, class: 'js-file'
@@ -30,75 +30,75 @@
               .js-file_group{"data-index" => "#{@item.images.count}"}
                 = file_field_tag :image, name: "item[images_attributes][#{@item.images.count}][image]", class: 'js-file'
                 .js-remove 削除
-        .listing-form-box
-          .listing-product-detail__category
-            = f.label 'カテゴリー', class: 'listing-default__label'
-            %span.listing-default--require ※必須
-            
-            .listing-select-wrapper
-              .listing-select-wrapper__box
-                = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
-                -# %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
-        .name1
-          .item
-            .iteminfo
-              .iteminfo__name
-                商品名
-              .iteminfo__must
-                ※必須
-            = f.text_field :name, placeholder:"商品名記載",class: "nameform"
-        .explain
-          .item
-            .iteminfo
-              .iteminfo__name
-                説明
-              .iteminfo__must
-                ※必須
-            = f.text_area :explain, placeholder:"詳細記載",class: "explainform" 
-        .brand
-          .item
-            .iteminfo
-              .iteminfo__name
-                ブランド
-              .iteminfo__must
-                ※任意
-            = f.text_field :brand, placeholder:"指定なし",class: "nameform"
-        .status
-          .status-info
-            .status-info__name
-              商品の状態
-            .status-info__must
+      .listing-form-box
+        .listing-product-detail__category
+          = f.label 'カテゴリー', class: 'listing-default__label'
+          %span.listing-default--require ※必須
+          
+          .listing-select-wrapper
+            .listing-select-wrapper__box
+              = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+              -# %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
+      .name1
+        .item
+          .iteminfo
+            .iteminfo__name
+              商品名
+            .iteminfo__must
               ※必須
-            = f.collection_select :status_id ,Status.all, :id,:name ,class: "statusform"
-        .area
-          .areainfo
-            .areainfo__name
-              発送元の地域
-            .areainfo__must
+          = f.text_field :name, placeholder:"商品名記載",class: "nameform"
+      .explain
+        .item
+          .iteminfo
+            .iteminfo__name
+              説明
+            .iteminfo__must
               ※必須
-            = f.collection_select :area_id ,Area.all, :id,:name ,class: "statusform"
-        .limit
-          .limitinfo
-            .limitinfo__name
-              発送までの日数
-            .limitinfo__must
-              ※必須
-            = f.collection_select :limit_id ,Limit.all, :id,:name ,class: "limitform"
-        .delivery_cost 
-          .deliveryinfo
-            .deliveryinfo__name
-              配送料の負担
-            .deliveryinfo__must
-              ※必須
-            = f.collection_select :delivery_cost_id ,DeliveryCost.all, :id,:name,class: "deliveryform"
-        .price-info
-          .price-info__box
-            .price-info__box__name
-              価格
-            .price-info__box__must
-              ※必須
-            = f.text_field :price , placeholder:" 販売価格(300~2,000,000)",class: ".price-info__box__form"
+          = f.text_area :explain, placeholder:"詳細記載",class: "explainform" 
+      .brand
+        .item
+          .iteminfo
+            .iteminfo__name
+              ブランド
+            .iteminfo__must
+              ※任意
+          = f.text_field :brand, placeholder:"指定なし",class: "nameform"
+      .status
+        .status-info
+          .status-info__name
+            商品の状態
+          .status-info__must
+            ※必須
+          = f.collection_select :status_id ,Status.all, :id,:name ,class: "statusform"
+      .area
+        .areainfo
+          .areainfo__name
+            発送元の地域
+          .areainfo__must
+            ※必須
+          = f.collection_select :area_id ,Area.all, :id,:name ,class: "statusform"
+      .limit
+        .limitinfo
+          .limitinfo__name
+            発送までの日数
+          .limitinfo__must
+            ※必須
+          = f.collection_select :limit_id ,Limit.all, :id,:name ,class: "limitform"
+      .delivery_cost 
+        .deliveryinfo
+          .deliveryinfo__name
+            配送料の負担
+          .deliveryinfo__must
+            ※必須
+          = f.collection_select :delivery_cost_id ,DeliveryCost.all, :id,:name,class: "deliveryform"
+      .price-info
+        .price-info__box
+          .price-info__box__name
+            価格
+          .price-info__box__must
+            ※必須
+          = f.text_field :price , placeholder:" 販売価格(300~2,000,000)",class: ".price-info__box__form"
 
-        .new
-          = f.submit "出品する",class: "newbtn"
-      
+      .new
+        = f.submit "出品する",class: "newbtn"
+    
