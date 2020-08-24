@@ -3,16 +3,16 @@
   %head
     %meta{charset: "utf-8"}
     
-  %section.pickupContainer
+  %section.pickupContainer1
     %h2.item_head
       新規出品商品
     .productBox
       .productHead
         - @items_index.each do |item|
-          .productList
+          .productList1
             = link_to item_path(item), class:"link"do
               %figure.productList--img
-                = image_tag item.images[0].image.url, size:"300x300" , alt:"商品写真"
+                = image_tag item.images[0].image.url, size:"250x200" , alt:"商品写真"
             .productList--body
               %h3.name
                 = item.name
@@ -24,11 +24,13 @@
                   (税込)
             -if item.buyer_id == 0
             -else
-              .items-box_photo__sold
-                .items-box_photo__sold__inner
+              .item-box_photo__sold
+                .item-box_photo__sold__inner
                   SOLD
       .pagenation
         = paginate @items_index
+  
+
 
   %section.pickupContainer
     %h2.item_head
@@ -36,7 +38,7 @@
 
     .productBoxes
       .productBox
-        .productHead
+        .productHeads
           %h3.topic
             レディース
           .productList
@@ -64,7 +66,7 @@
                     SOLD
 
       .productBox
-        .productHead
+        .productHeads
           %h3.topic
             メンズ
           .productList
@@ -73,7 +75,7 @@
                 このカテゴリの新規投稿商品はありません。
             - else
               = link_to item_path(@items), class:"link" do
-                %figure.productList--img
+                %figure.productList--img1
                   = image_tag @last_mens_item.images[0].image.url,size:"250x200" , alt:"商品写真"
               .productList--body
                 %h3.name
@@ -91,7 +93,7 @@
                   .items-box_photo__sold__inner
                     SOLD
       .productBox
-        .productHead
+        .productHeads
           %h3.topic
             ベビー・キッズ
           .productList
@@ -118,7 +120,7 @@
                     SOLD
 
       .productBox
-        .productHead
+        .productHeads
           %h3.topic
             家電・スマホ・カメラ
           .productList
@@ -139,7 +141,7 @@
                   %p.tax
                     (税込)
 
-              -if @last_appliance_item.buyer_id == 0
+              -if @last_appliances_item.buyer_id == 0
               -else
                 .items-box_photo__sold
                   .items-box_photo__sold__inner
