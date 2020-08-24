@@ -40,7 +40,7 @@ $(document).on('turbolinks:load', ()=> {
       fileIndex.shift();
       // 末尾の数に1足した数を追加する
       fileIndex.push(fileIndex[fileIndex.length - 1] + 1);
-      if( $( '.js-file_group').length == 4){
+      if( $( '.js-file_group').length == 5){
         $('.js-file_group:last').css('display', 'none');
       }
     }
