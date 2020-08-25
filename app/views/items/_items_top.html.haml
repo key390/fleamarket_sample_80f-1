@@ -75,7 +75,7 @@
                 このカテゴリの新規投稿商品はありません。
             - else
               = link_to item_path(@last_mens_item), class:"link" do
-                %figure.productList--img1
+                %figure.productList--img
                   = image_tag @last_mens_item.images[0].image.url,size:"250x200" , alt:"商品写真"
               .productList--body
                 %h3.name
