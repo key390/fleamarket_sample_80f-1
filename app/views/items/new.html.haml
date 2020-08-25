@@ -12,7 +12,6 @@
         .new_imagemust 
           ※必須
       .edit_hidden-content
-        -# = form_with model: @item, local: true do |f|
         #image-box
           #previews
             - if @item.persisted?
@@ -38,7 +37,6 @@
           .listing-select-wrapper
             .listing-select-wrapper__box
               = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
-              -# %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
 
       .name1
         .item
