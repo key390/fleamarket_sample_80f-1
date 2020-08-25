@@ -83,7 +83,6 @@
             = icon('fa','flag',class:"option__btn")
             .caution
               不適切な商品を通報
-          .comment-form__attention
     - if user_signed_in? 
       .comment
         = form_with model: [@item, @comment], html: {class: "form"}, local: true do |f|
