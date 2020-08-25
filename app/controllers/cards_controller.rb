@@ -1,11 +1,15 @@
 class CardsController < ApplicationController
 
   require "payjp"
-  before_action :set_card, only: [:show, :delete, :new]
+  before_action :set_card, only: [:show, :delete,]
 
   def new
-    card = Card.where(user_id: current_user.id)
-    redirect_to action: "show" if card.exists?
+    if user_signed_in?
+      card = Card.where(user_id: current_user.id)
+      redirect_to action: "show" if card.exists?
+    else
+      redirect_to root_path,notice:"ログインして下さい"
+    end
   end
 
   def pay
@@ -36,6 +40,8 @@ class CardsController < ApplicationController
   end
 
   def show
+    # if user_signed_in?
+    #   @card = Card.find_by(user_id: current_user.id)
     if @card.blank?
       redirect_to action: "new"
     else
@@ -43,6 +49,9 @@ class CardsController < ApplicationController
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @default_card_information = customer.cards.retrieve(@card.card_id)
     end
+    # else
+    #   redirect_to root_path,notice:"ログインして下さい"
+    # end
   end
   
   private

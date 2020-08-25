@@ -57,7 +57,7 @@
             %td 
               =@item.limit.name
       .edit-delete
-        - if user_signed_in? && current_user.id == @item.user_id
+        - if user_signed_in? && current_user.id == @item.user_id 
           .delete
             = link_to item_path(@item.id), method: :delete do
               .delete-btn
@@ -66,12 +66,11 @@
             = link_to edit_item_path(@item.id),"data-turbolinks": false do
               .edit-btn
                 編集する！
-        - else
-          - if user_signed_in?
-            .buy
-              = link_to item_purchase_index_path(@item) do
-                .buy-btn
-                  購入する！
+        - elsif user_signed_in? && @item.buyer_id == 0 
+          .buy
+            = link_to item_purchase_index_path(@item) do
+              .buy-btn
+                購入する！
       .option
         %ul.option-btns
           %li.option-like

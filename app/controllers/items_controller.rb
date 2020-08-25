@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
   def show
     @parents = Category.where(ancestry: nil)
     @images = @item.images 
-    @comment = current_user.comments.new
+    # @comment = current_user.comments.new
     @comments = @item.comments.includes(:user)
     @comment = @item.comments.build
   end
@@ -51,7 +51,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path 
-    else 
+    else
       redirect_to new_item_path, notice: "商品情報を正確に入力して下さい"
     end  
   end
