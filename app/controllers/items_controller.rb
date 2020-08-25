@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   def show
     @parents = Category.where(ancestry: nil)
     @images = @item.images 
-    @comment = current_user.comments.new
+    # @comment = current_user.comments.new
     @comments = @item.comments.includes(:user)
     @comment = @item.comments.build
   end
@@ -84,6 +84,7 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
+  
 
 end
 
