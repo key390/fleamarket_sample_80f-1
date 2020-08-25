@@ -36,7 +36,7 @@
           
           .listing-select-wrapper
             .listing-select-wrapper__box
-              = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+              = f.collection_select :category_id, @parents, :id, :name, {include_blank: "---"}, {class: 'listing-select-wrapper__box--select', name: 'parent_id',id: 'parent_category'}
 
       .name1
         .item
