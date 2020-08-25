@@ -25,8 +25,9 @@ class ItemsController < ApplicationController
   end
 
   def new
+    # binding.pry
     @item = Item.new
-    @item.images.new
+    @item.images.build
     @parents = Category.where(ancestry: nil)
   end
 
@@ -50,8 +51,8 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path 
-    else 
-      redirect_to new_item_path
+    else
+      redirect_to new_item_path, notice: "商品情報を正確に入力して下さい"
     end  
   end
 
