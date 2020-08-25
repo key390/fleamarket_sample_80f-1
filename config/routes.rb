@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   
 
   resources :user, only: [:show] 
-    
+
 
   resources :items, only: [:index,:new,:create,:show, :edit, :update, :destroy] do
     resources :comments, only: [:create, :destroy] 
