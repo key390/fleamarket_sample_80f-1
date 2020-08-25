@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load', ()=> {
-  console.log("popopo2")
   // 画像用のinputを生成する関数
   const buildFileField = (num)=> {
     const html = `<div data-index="${num + 1}" class="js-file_group">
@@ -20,6 +19,7 @@ $(document).on('turbolinks:load', ()=> {
   let fileIndex = [1,2,3,4,5,6,7,8,9,10];
   // 既に使われているindexを除外
   lastIndex = $('.js-file_group:last').data('index');
+  console.log(lastIndex)
   fileIndex.splice(0, lastIndex);
 
   $('.hidden-destroy').hide();

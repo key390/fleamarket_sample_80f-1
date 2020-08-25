@@ -192,14 +192,15 @@
   padding: 24px;
   background-color: white;
   overflow: scroll;
-  height: 90px;
-  a {
+  height: 300px;
+}
+.commentsuu{
     display: flex;
     text-decoration: none;
     color: black;
     font-size: 18px;
   }
-}
+
 .commentscc{
   margin-bottom: 10px;
   margin-left: 10px;

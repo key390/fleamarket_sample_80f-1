@@ -1,4 +1,10 @@
 
+.notice{
+  background-color: orange;
+  font-weight: bold;
+  
+}
+
 .form1{
   height: 100vh;
   padding:0 150px;
@@ -6,34 +12,39 @@
   overflow: scroll;
   
   .contents{
+    width: 1100px;
     padding: 10px 50px;
     display: flex;
     background-color: white;
   }
 }
-  .constraint{
-    display: flex;
-    
-  }
 
-  .images{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-  }
-  
-  .imageindicate{
-    width:110px;
+.new_constraint{
+  display: flex;
+  justify-content: center;
+  .new_imageindicate{
     font-size: 20px;
-}
-  .imagemust{
-    font-size: 15px;
-    color: red;
-    width: 100px;
   }
+  .new_image-coution{
+    line-height: 30px;
+  }
+  .new_imagemust{
+    color: red;
+    line-height: 30px;
+  }
+}
+
+.edit_hidden-content{
+  padding: 20px 0;
+}
+
+.js-file_group{
+  border-bottom: 1px solid #EEEEEE;
+}
+  
   .listing-form-box{
     padding: 50px 0;
+    border-bottom: 1px solid #EEEEEE;
     .listing-product-detail__category{
       display: flex;
       // padding: 0 80px;
@@ -48,18 +59,15 @@
       }
     }
   }
-  .hidden-content{
-  padding: 0 40px;
-  display: flex;
-  padding-top: 15px;
-  justify-content: space-around;
-  }
+
+ 
 
 
 .name1{
   margin-top: 30px;
   margin-bottom: 16px;
   padding-top: 15px;
+  border-bottom: 1px solid #EEEEEE;
 
 }
     .item{
@@ -74,17 +82,7 @@
             margin-bottom: 20px;
             width:110px;
           }
-          // .imagemust{
-          //   color: red;
-          //   margin-left: 45px;
-          //   width: 100px;
-          // }
-        .hidden-content{
-          padding: 0 40px;
-          padding-top: 15px;
-          display: flex;
-          justify-content: space-around;
-        }
+
 
   .name{
     margin-top: 30px;
@@ -125,9 +123,13 @@
   .listing-select-wrapper{
     
   }
+  .listing-select-wrapper__box--arrow-down{
+    display: none;
+  }
   .explain{
     margin-bottom: 16px;
     padding-top: 15px;
+    border-bottom: 1px solid #EEEEEE;
   }
 
   .listing-product-detail__category{
@@ -144,10 +146,12 @@
   ​
   .brand{
     margin-bottom: 16px;
+    border-bottom: 1px solid #EEEEEE;
   }
 
 .status{
   padding: 20px 0;
+  border-bottom: 1px solid #EEEEEE;
   .status-info{
     display: flex;
     padding: 0 80px;
@@ -164,6 +168,7 @@
 
 .area{
   padding: 20px 0;
+  border-bottom: 1px solid #EEEEEE;
   .areainfo{
     display: flex;
     padding: 0 80px;
@@ -180,6 +185,7 @@
 
 .limit{
   padding: 20px 0;
+  border-bottom: 1px solid #EEEEEE;
   .limitinfo{
     display: flex;
     padding: 0 80px;
@@ -196,6 +202,7 @@
 
 .delivery_cost {
   padding: 20px 0;
+  border-bottom: 1px solid #EEEEEE;
   .deliveryinfo{
     display: flex;
     padding: 0 80px;
@@ -212,6 +219,7 @@
 
 .price-info{
   padding: 20px 0;
+  border-bottom: 1px solid #EEEEEE;
   .price-info__box{
     display: flex;
     padding: 0 80px;

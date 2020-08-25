@@ -57,7 +57,7 @@
             %td 
               =@item.limit.name
       .edit-delete
-        - if user_signed_in? && current_user.id == @item.user_id
+        - if user_signed_in? && current_user.id == @item.user_id 
           .delete
             = link_to item_path(@item.id), method: :delete do
               .delete-btn
@@ -66,12 +66,11 @@
             = link_to edit_item_path(@item.id),"data-turbolinks": false do
               .edit-btn
                 編集する！
-        - else
-          - if user_signed_in?
-            .buy
-              = link_to item_purchase_index_path(@item) do
-                .buy-btn
-                  購入する！
+        - elsif user_signed_in? && @item.buyer_id == 0 
+          .buy
+            = link_to item_purchase_index_path(@item) do
+              .buy-btn
+                購入する！
       .option
         %ul.option-btns
           %li.option-like
@@ -83,17 +82,18 @@
             = icon('fa','flag',class:"option__btn")
             .caution
               不適切な商品を通報
-    .comment
-      = form_with model: [@item, @comment], html: {class: "form"}, local: true do |f|
-        .comment-form
-          = f.text_area :comment_content, class: "comment-form__text", placeholder: 'コメント下さい何でもします'
-          = f.hidden_field :item_id, value: @item.id
-          .comment-form__attention
-            相手のことを考え丁寧なコメントを心がけましょう。
-            不快な言葉遣いなどは利用制限や退会処分となることがあります。
-          .comment-form__btn
-            = f.submit "コメントする！", class: "comment-form__send"
-            = icon('fa','comment',class:"comment-form__icon")
+    - if user_signed_in? 
+      .comment
+        = form_with model: [@item, @comment], html: {class: "form"}, local: true do |f|
+          .comment-form
+            = f.text_area :comment_content, class: "comment-form__text", placeholder: 'コメント下さい何でもします'
+            = f.hidden_field :item_id, value: @item.id
+            .comment-form__attention
+              相手のことを考え丁寧なコメントを心がけましょう。
+              不快な言葉遣いなどは利用制限や退会処分となることがあります。
+            .comment-form__btn
+              = f.submit "コメントする！", class: "comment-form__send"
+              = icon('fa','comment',class:"comment-form__icon")
     %ul.next-link
       %li.next-link__1
         = link_to "#" ,class: "btn" do
@@ -102,29 +102,12 @@
         = link_to "#" ,class: "btn" do
           次の商品 >
     .comments
-      - if user_signed_in? 
-        - if @comments
-          - @comments.each do |comment|
-            = link_to  comment.user.nickname, "#{comment.user_id}"
-            .commentscc
-              = comment.comment_content 
-    .related-items
-      .related-items-category
-        同カテゴリーをもっと見る
-      .product__lists
-        .product__list
-          = link_to '#' do
-            = image_tag 'pict-reason-02.jpg', class:'product__list__image'
-            .product__list__body
-              .product__list__body__name
-                100億ドルの夜景
-              .product__list__body__details
-                .product__list__body__details__price
-                  100億円
-                .product__list__body__details__like
-                  ★ 0
-              .product__list__body__tax
-                (税込)
+      - if @comments
+        - @comments.each do |comment|
+          .commentsuu
+            = comment.user.nickname
+          .commentscc
+            = comment.comment_content 
 .wrapper
   = render "bottom-contents"
 
