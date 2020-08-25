@@ -1,0 +1,103 @@
+.wrapper
+  = render 'items/top-contents'
+.profile
+  .profile-user
+    本人情報
+    .profile-user__nickname
+      ニックネーム
+      = current_user.nickname
+    .profile-user__lastname
+      名字
+      = current_user.lastname
+    .profile-user__firstname
+      お名前
+      = current_user.firstname
+    .profile-user__mail
+      メールアドレス
+      = current_user.email
+    .profile-user__birthday
+      生年月日
+      = current_user.birthday
+  .profile-address
+    ご住所
+    .profile-address__post
+      郵便番号
+      = "〒" + current_user.address.post.to_s
+    .profile-address__prefecture
+      都道府県
+      = current_user.address.prefectures.to_s
+    .profile-address__city
+      市区町村
+      = current_user.address.city.to_s
+    .profile-address__number
+      番地
+      = current_user.address.number.to_s
+    .profile-address__building
+      マンション名・ビル名
+      = current_user.address.building.to_s
+    .profile-address__phone
+      電話番号
+      = current_user.address.phone.to_s
+
+.photo3
+  .photo3__content
+    %h2.photo3__content__tyty だれでもかんたん、人生を変えるフリマアプリ
+    %p.photo3__content__tyty2 今すぐ無料ダウンロード！
+    .photo3__content__iccc
+      .photo3__content__iccc__one
+        = link_to '#' do
+          = image_tag ("http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg")
+      .photo3__content__iccc__secd
+        = link_to '#' do
+          = image_tag ("http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg")
+.top-under
+  %ul.top-under__cotr
+    %li.top-under__cotr__tei1
+      %h2.top-under__cotr__tei1__okm1 FURIMAについて
+      %ul
+        %li
+          %a
+          =link_to "#" do
+            会社概要（運営会社）
+        %li
+          %a
+          = link_to "#" do
+            プライバシーポリシー
+        %li
+          %a
+          = link_to "#" do
+            FURIMA利用規約
+        %li
+          %a
+          = link_to "#" do
+            ポイントに関する特約
+    %li.top-under__cotr__tei1
+      %h2.top-under__cotr__tei1__okm1 FURIMAを見る
+      %ul
+        %li
+          %a
+          = link_to "#" do
+            カテゴリー一覧
+        %li
+          %a
+          = link_to "#" do
+            ブランド一覧
+    %li.top-under__cotr__tei1
+      %h2.top-under__cotr__tei1__okm1 ヘルプ＆ガイド
+      %ul
+        %li
+          %a
+          = link_to "#" do
+            FURIMAガイド
+        %li
+          %a
+          = link_to "#" do
+            FURIMAロゴ利用ガイドライン
+        %li
+          %a
+          = link_to "#" do
+            お知らせ
+  .top-under__ffffuuu
+    = link_to '/' do
+      = image_tag ("logo-white.png")
+  %p © FURIMA
