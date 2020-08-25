@@ -25,8 +25,12 @@ class PurchaseController < ApplicationController
     :amount => @item.price, #支払金額を入力（itemテーブル等に紐づけても良い）
     :customer => @card.customer_id, #顧客ID
     :currency => 'jpy', #日本円
-  )
-  redirect_to action: 'done' #完了画面に移動
+    )
+    if @item.pay?
+      redirect_to action: 'done' #完了画面に移動
+    else
+      redirect_to action: 'index',notice:"購入出来ませんでした"
+    end
   end
 
   def done
