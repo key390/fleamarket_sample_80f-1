@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.includes(:images).order('created_at DESC')
-    @items_index = @items.order(updated_at: :desc).page(params[:page]).per(5)
+    @items_index = @items.order(updated_at: :desc).page(params[:page]).per(4)
     @parents = Category.where(ancestry: nil)
     @ladies = Category.find(1).subtree
     @ladies_items = Item.where(category_id: @ladies)
@@ -51,7 +51,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to root_path 
     else 
-      redirect_to :new
+      redirect_to new_item_path
     end  
   end
 
@@ -72,7 +72,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to root_path
     else
-      flash.now[:aret] = '更新ができませんでした'
+      redirect_to edit_item_path notice: '未入力があるため、更新ができませんでした'
     end
   end
 

@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load', ()=> {
-  console.log("popopo2")
   // 画像用のinputを生成する関数
   const buildFileField = (num)=> {
     const html = `<div data-index="${num + 1}" class="js-file_group">
@@ -40,7 +39,7 @@ $(document).on('turbolinks:load', ()=> {
       fileIndex.shift();
       // 末尾の数に1足した数を追加する
       fileIndex.push(fileIndex[fileIndex.length - 1] + 1);
-      if( $( '.js-file_group').length == 4){
+      if( $( '.js-file_group').length == 5){
         $('.js-file_group:last').css('display', 'none');
       }
     }

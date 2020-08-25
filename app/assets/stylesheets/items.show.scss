@@ -112,6 +112,8 @@
   padding: 5px;
   .option__btn{
     color: #3CCACE;
+    font-weight:bold;
+    font-family: "Font Awesome 5 Free";
   }
   .favorite{
     font-size: 20px;
@@ -125,6 +127,10 @@
   padding: 5px;
   border: 1px black solid;
   border-radius: 10px;
+  .option__btn{
+    font-weight:bold;
+    font-family: "Font Awesome 5 Free";
+  }
   .caution{
     font-size: 15px;
     margin-left: 5px;
@@ -166,6 +172,8 @@
       position: absolute;
       left: 150px;
       top: 17px;
+      font-family: "Font Awesome 5 Free";
+      font-weight:bold;
     }
   
 
