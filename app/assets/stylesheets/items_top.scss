@@ -201,7 +201,7 @@
       border-bottom: 60px solid transparent;
       border-left: 60px solid #ea352d ;
       z-index:100;
-      position: relative;
+      position: absolute;
       top:-305px;
       &__inner{
         transform: rotate(-45deg);
@@ -212,7 +212,10 @@
         font-weight: 600;
     }
   }
+.productList1{
+  position: relative;
 
+}
 .items-box_photo__sold{
   width: 0;
   height: 0;
@@ -221,7 +224,7 @@
   border-bottom: 60px solid transparent;
   border-left: 60px solid #ea352d ;
   z-index:100;
-  position: relative;
+  position: absolute;
   top:-310px;
     &__inner{
       transform: rotate(-45deg);
