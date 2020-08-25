@@ -47,25 +47,6 @@
           }
   }
 
-
-  .listing-form-box{
-    padding: 50px 0;
-    .listing-product-detail__category{
-      display: flex;
-      .listing-default__label{
-        width: 100px;
-        margin-right: 50px;
-      }
-      .listing-default--require{
-        width: 100px;
-        color: red;
-        margin-left: 15px;
-
-      }
-    }
-  }
-
-
       .edit_item{
         font-size: 30px;
         margin-top: 30px;
@@ -173,8 +154,7 @@
         box-sizing: border-box;
         font-size: 62.5%;
       }
-      
-      /* 背景用*/
+     
       body {
         padding: 30px;
       }

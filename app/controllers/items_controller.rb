@@ -25,15 +25,16 @@ class ItemsController < ApplicationController
   end
 
   def new
+    # binding.pry
     @item = Item.new
-    @item.images.new
+    @item.images.build
     @parents = Category.where(ancestry: nil)
   end
 
   def show
     @parents = Category.where(ancestry: nil)
     @images = @item.images 
-    @comment = current_user.comments.new
+    # @comment = current_user.comments.new
     @comments = @item.comments.includes(:user)
     @comment = @item.comments.build
   end
@@ -50,8 +51,8 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path 
-    else 
-      redirect_to new_item_path
+    else
+      redirect_to new_item_path, notice: "商品情報を正確に入力して下さい"
     end  
   end
 
@@ -72,7 +73,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to root_path
     else
-      redirect_to edit_item_path notice: '未入力があるため、更新ができませんでした'
+      redirect_to edit_item_path,notice: '未入力があるため、更新ができませんでした'
     end
   end
 
@@ -84,6 +85,7 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
+  
 
 end
 
