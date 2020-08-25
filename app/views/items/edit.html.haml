@@ -35,11 +35,11 @@
             
             .listing-select-wrapper
               .listing-select-wrapper__box
-                = f.collection_select :category_id, @parents, :id, :name, {selected: @item.category.root.id}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+                = f.collection_select :category_id, @item.category.root.siblings, :id, :name, {selected: @item.category.root.id}, {class: 'listing-select-wrapper__box--select',name: 'parent_id', id: 'parent_category'}
                 %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
-                = f.collection_select :category_id, @item.category.parent.siblings, :id, :name, {selected: @item.category.parent.id}, {class: 'listing-select-wrapper__box--select', id: 'parent_category1'}
+                = f.collection_select :category_id, @item.category.parent.siblings, :id, :name, {include_blank: "---",selected: @item.category.parent.id}, {class: 'listing-select-wrapper__box--select',name: 'child_id', id: 'parent_category1'}
                 
-                = f.collection_select :category_id, @item.category.siblings, :id, :name, {selected: @item.category.id}, {class: 'listing-select-wrapper__box--select', id: 'parent_category2'}
+                = f.collection_select :category_id, @item.category.siblings, :id, :name, {include_blank: "---",selected: @item.category.id}, {class: 'listing-select-wrapper__box--select', id: 'parent_category2'}
       .name1
         .item
           .iteminfo
