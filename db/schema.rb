@@ -26,12 +26,6 @@ ActiveRecord::Schema.define(version: 2020_08_21_061323) do
     t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
-  create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "customer_id", null: false
     t.string "card_id", null: false
@@ -59,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_08_21_061323) do
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "image", null: false
+    t.text "image"
     t.bigint "item_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
